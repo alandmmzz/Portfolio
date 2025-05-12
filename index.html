@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV de Aland</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a>Español</a>
+    <a class="selected">English</a>
+  </header>
+
+  <main class="scroll-container">
+    <section class="scroll-section main-title-container aura">
+        <div class="ambient-aura aura1"></div>
+        <div class="ambient-aura aura2"></div>  
+        <div class="ambient-aura aura3"></div>
+        <div class="ambient-aura aura4"></div>
+        <div class="card-profile">
+            <div class="card-information">
+                <p class="main-pretitle DMSans">Front-End developer</p>
+                <p class="main-title alientz">Aland Martinez</p>
+                <p class="main-description DMSans">Soy un desarrollador front-end con experiencia en diseño moderno, pasión por el UX/UI y amor por el código limpio.</p>
+            </div>
+            <div class="card-img">
+                <p>hol</p>
+            </div>
+        </div>
+        
+    </section>
+
+    
+
+    <section class="scroll-section time-bar-container">
+        <div class="left-container">
+            <div class="time-bar">
+                <div class="event active">
+                    <div class="event-circle"></div>
+                    <div class="event-title">
+                        <span>trabajo 1</span>
+                    </div>
+                </div>
+                <div class="right-down-connector">
+                    <div class="pipe"></div>
+                    <div class="pipe"></div>
+                    <div class="pipe"></div>
+                </div>
+                <div class="event event-right">
+                    <div class="event-circle"></div>
+                    <div class="event-title">
+                        <span>trabajo 2</span>
+                    </div>
+                </div>
+                <div class="left-down-connector">
+                    <div class="pipe"></div>
+                    <div class="pipe"></div>
+                    <div class="pipe"></div>
+                </div>
+                <div class="event">
+                    <div class="event-circle"></div>
+                    <div class="event-title">
+                        <span>trabajo 3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right-container">
+            <div class="text-container">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus quia magni porro omnis corrupti voluptates ipsam consequatur assumenda. Dicta saepe voluptatem quam similique earum. Tenetur quo asperiores aspernatur soluta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus quia magni porro omnis corrupti voluptates ipsam consequatur assumenda. Dicta saepe voluptatem quam similique earum. Tenetur quo asperiores aspernatur soluta.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium repellendus quia magni porro omnis corrupti voluptates ipsam consequatur assumenda. Dicta saepe voluptatem quam similique earum. Tenetur quo asperiores aspernatur soluta.
+            </div>
+        </div>
+    </section>
+
+    <section class="scroll-section time-bar-container">
+        <div class="left-container">
+            <div class="time-bar">
+                <div class="event-circle"></div>
+                <div class="event-connector"></div>
+                <div class="event-circle"></div>
+                <div class="event-connector"></div>
+                <div class="event-circle"></div>
+            </div>
+        </div>
+        <div class="right-container"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>💻 Hecho con HTML & CSS por Aland — 2025</p>
+  </footer>
+  <script>
+    let warm = true;
+    let r = 255, g = 210, b = 158; // cálido
+
+    function lerpColor(a, b, t) {
+    return a + (b - a) * t;
+    }
+
+    function animateColor() {
+    const steps = 60;
+    let i = 0;
+
+    const startColor = warm ? [255, 210, 158] : [137, 202, 255];
+    const endColor = warm ? [137, 202, 255] : [255, 210, 158];
+
+    function step() {
+        if (i <= steps) {
+        const t = i / steps;
+        const r = Math.round(lerpColor(startColor[0], endColor[0], t));
+        const g = Math.round(lerpColor(startColor[1], endColor[1], t));
+        const b = Math.round(lerpColor(startColor[2], endColor[2], t));
+
+        document.documentElement.style.setProperty('--aura-color', `rgba(${r}, ${g}, ${b}, 0.2)`);
+        i++;
+        requestAnimationFrame(step);
+        }
+    }
+
+    warm = !warm;
+    step();
+    }
+
+    setInterval(animateColor, 8000);
+
+
+    const aura = document.querySelector('.aura');
+  
+    let targetX = 0;
+    let targetY = 0;
+    let currentX = 0;
+    let currentY = 0;
+  
+    aura.addEventListener('mousemove', (e) => {
+      const rect = aura.getBoundingClientRect();
+      targetX = e.clientX - rect.left;
+      targetY = e.clientY - rect.top;
+    });
+  
+    function animate() {
+      // Le damos un paso hacia el target (ajustá el 0.05 para más o menos suavidad)
+      currentX += (targetX - currentX) * 0.05;
+      currentY += (targetY - currentY) * 0.05;
+  
+      aura.style.setProperty('--x', `${currentX}px`);
+      aura.style.setProperty('--y', `${currentY}px`);
+  
+      requestAnimationFrame(animate);
+    }
+  
+    animate(); // Start the animation loop
+  </script>
+</body>
+</html>
