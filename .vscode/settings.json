@@ -1,0 +1,8 @@
+{
+  "reactComponentGenerator.createFolder": false,
+  "reactComponentGenerator.withStyle": false,
+  "reactComponentGenerator.functionalComponent": true,
+  "reactComponentGenerator.useTypeScript": false,
+  "reactComponentGenerator.withTest": false,
+  "reactComponentGenerator.withStory": false
+}

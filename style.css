@@ -302,128 +302,170 @@ section {
 
 #studies-timeline {
     .contenedor {
-        .studies-content {
-            margin-top: 2rem;
+        .studies-description-container {
+            border: 1px solid gray;
+            border-radius: 10px;
+            padding: 1rem 1.5rem;
             display: flex;
-            flex-direction: column;
-            transition: 0.4s;
-            .studies-timeline {
+            gap: 20px;
+            .container-left {
+                width: 70%;
+                .studies-title {
+                    color: var(--clr-light-a0);
+                    font-family: 'DM Sans', sans-serif;
+                    opacity: 0.8;
+                }
+                .studies-description {
+                    font-size: 1.2rem;
+                    color: var(--clr-light-a0);
+                    font-family: 'DM Sans', sans-serif;
+                    opacity: 0.8;
+                }
+            }
+            .container-right {
+                width: 30%;
                 display: flex;
-                flex-wrap: wrap;
                 justify-content: center;
-                align-items: flex-end;
-                .studies-connector {
+                align-items: center;
+                .studies-image-container {
                     width: 100%;
-                    margin-bottom: 38px;
-                    .connector-line {
-                        justify-self: left;
-                        width: calc(66.66% + 4px);
-                        height: 3px;
-                        background: rgba(255, 255, 255, 0.2);
-                        margin-left: 23px;
-                    }
-                    .connector-line::after {
-                        content: '';
-                        display: block;
-                        width: 3px;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-radius: 10px;
                         backdrop-filter: blur(20px);
                         -webkit-backdrop-filter: blur(20px);
-                        background: rgba(255, 255, 255, 0.2);
-                        height: 40px;
-                        position: relative;
-                        justify-self: center;
-                        top: 0px;
-                    }
-                }
-                ul.first-level-studies li,
-                ul.second-level-studies li {
-                    justify-self: start;
-                    display: grid;
-                    grid-template-columns: 50px auto;
-                    gap: 0 10px;
-                    p {
-                        position: relative;
-                        top: -20px;
-                        opacity: 0.6;
-                    }
-                    div.study-circle {
-                        backdrop-filter: blur(20px);
-                        -webkit-backdrop-filter: blur(20px); /* pa’ que funcione en Safari */
-                        background: rgba(255, 255, 255, 0.2); /* blanco-transparente */
-                        width: 50px;
-                        height: 50px;
-                        border-radius: 50%;
-                        grid-row: span 2;
-                        margin-bottom: 40px;
-                        justify-self: center;
-                    }
-                    div.study-circle::after {
-                        content: '';
-                        display: block;
-                        width: 3px;
-                        backdrop-filter: blur(20px);
-                        -webkit-backdrop-filter: blur(20px); /* pa’ que funcione en Safari */
-                        background: rgba(255, 255, 255, 0.2); /* blanco-transparente */
-                        height: 40px;
-                        position: relative;
-                        justify-self: center;
-                        top: 50px;
-                    }
-                    ul.studies-details-list {
-                        grid-column: span 2;
-                        li.studies-detail {
-                            p {
-                                top: 0px;
-                                opacity: 0.9;
-                            }
-                            div.study-circle {
-                                width: 30px;
-                                height: 30px;
-                                margin-bottom: 20px;
-                                transition: border 1s;
-                                border: 3px solid white;
-                            }
-                            div.study-circle::after {
-                                top: 30px;
-                                height: 20px;
-                            }
-                        }
-                    }
-                }
-                ul.second-level-studies {
-                    width: 33.33%;
-                    li:hover {
-                        div.study-circle {
-                            border: 3px solid white;
-                        }
-                        div.study-circle::after {
-                            background: white;
-                            top: 47px;
-                        }
-                        ul.studies-details-list {
-                            display: block;
-                            div.study-circle::after {
-                                top: 27px !important;
-                            }
-                            li:last-child div.study-circle::after {
-                                background: rgba(255, 255, 255, 0.2);
-                            }
-                        }
-                    }
-                }
-                ul.first-level-studies {
-                    justify-self: center;
-                    width: 33.33%;
-                    li:last-child {
-                        div.study-circle:after {
-                            display: none;
-                        }
+                        background: rgba(255, 255, 255, 0.1);
                     }
                 }
             }
         }
-        
     }
+    .studies-content {
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        transition: 0.4s;
+        .studies-timeline {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-end;
+            .studies-connector {
+                width: 100%;
+                margin-bottom: 38px;
+                .connector-line {
+                    justify-self: left;
+                    width: calc(66.66% + 4px);
+                    height: 3px;
+                    background: rgba(255, 255, 255, 0.2);
+                    margin-left: 23px;
+                }
+                .connector-line::after {
+                    content: '';
+                    display: block;
+                    width: 3px;
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    background: rgba(255, 255, 255, 0.2);
+                    height: 40px;
+                    position: relative;
+                    justify-self: center;
+                    top: 0px;
+                }
+            }
+            ul.first-level-studies li,
+            ul.second-level-studies li {
+                justify-self: start;
+                display: grid;
+                grid-template-columns: 50px auto;
+                gap: 0 10px;
+                p {
+                    position: relative;
+                    top: -20px;
+                    opacity: 0.6;
+                }
+                div.study-circle {
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px); /* pa’ que funcione en Safari */
+                    background: rgba(255, 255, 255, 0.2); /* blanco-transparente */
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    grid-row: span 2;
+                    margin-bottom: 40px;
+                    justify-self: center;
+                }
+                div.study-circle::after {
+                    content: '';
+                    display: block;
+                    width: 3px;
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px); /* pa’ que funcione en Safari */
+                    background: rgba(255, 255, 255, 0.2); /* blanco-transparente */
+                    height: 40px;
+                    position: relative;
+                    justify-self: center;
+                    top: 50px;
+                }
+                ul.studies-details-list {
+                    grid-column: span 2;
+                    li.studies-detail {
+                        p {
+                            top: 0px;
+                            opacity: 0.9;
+                        }
+                        div.study-circle {
+                            width: 30px;
+                            height: 30px;
+                            margin-bottom: 20px;
+                            transition: border 1s;
+                            border: 3px solid white;
+                        }
+                        div.study-circle::after {
+                            top: 30px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
+            ul.second-level-studies {
+                width: 33.33%;
+                li:hover {
+                    div.study-circle {
+                        border: 3px solid white;
+                    }
+                    div.study-circle::after {
+                        background: white;
+                        top: 47px;
+                    }
+                    ul.studies-details-list {
+                        display: block;
+                        div.study-circle::after {
+                            top: 27px !important;
+                        }
+                        li:last-child div.study-circle::after {
+                            background: rgba(255, 255, 255, 0.2);
+                        }
+                    }
+                }
+            }
+            ul.first-level-studies {
+                justify-self: center;
+                width: 33.33%;
+                li:last-child {
+                    div.study-circle:after {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    
 }
 
 footer {
