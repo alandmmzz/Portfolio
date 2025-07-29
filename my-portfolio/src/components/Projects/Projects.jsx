@@ -3,121 +3,93 @@ import './Projects.css';
 
 export default function Projects() {
 
+    const proyectos = [
+        {
+            titulo: "Empleo actual: Front-End Jr. en Asignet",
+            descripcion: "Desarrollo front-end y diseño UXUI",
+            skills: [
+                { nombre: "HTML", imagen: "/assets/img/skills/html.png" },
+                { nombre: "CSS", imagen: "/assets/img/skills/css-3.png" },
+                { nombre: "JQuery", imagen: "/assets/img/skills/jquery.png" },
+                { nombre: "Adobe Illustrator", imagen: "/assets/img/skills/illustrator.png" },
+                { nombre: "Figma", imagen: "/assets/img/skills/figma.png" },
+            ],
+            imagenes: [
+                "/assets/img/proyectos/proyecto1.jpg",
+                null, // si la querés vacía (por ahora)
+                null
+            ]
+        },
+        {
+            titulo: "Nombre del Proyecto",
+            descripcion: "Breve descripción. Qué tecnologías usaste, qué rol tuviste, etc.",
+            skills: [
+                { nombre: "Shopify", imagen: "/assets/img/skills/shopify.png" },
+                { nombre: "Figma", imagen: "/assets/img/skills/figma.png" }
+            ],
+            imagenes: [
+                null,
+                null,
+                null
+            ]
+        },
+        {
+            titulo: "Nombre del Proyecto",
+            descripcion: "Breve descripción. Qué tecnologías usaste, qué rol tuviste, etc.",
+            skills: [
+                { nombre: "Bootstrap", imagen: "/assets/img/skills/bootstrap.png" },
+                { nombre: "React", imagen: "/assets/img/skills/react.png" },
+                { nombre: "Firebase", imagen: "/assets/img/skills/firebase.png" },
+            ],
+            imagenes: [
+                null,
+                null,
+                null
+            ]
+        }
+    ];
+
+
     return (
         <>
             <section id="proyectos">
                 <div className="contenedor">
                     <h2>Proyectos destacados</h2>
                     <div className="grid-proyectos">
-                        <div className="proyecto">
-                            <div className="proyecto-header">
-                                <div className="proyecto-header-left">
-                                    <h3>Empleo actual: Front-End Jr. en Asignet</h3>
-                                    <p>Desarrollo front-end y diseño UXUI</p>
-                                </div>
-                                <div className="proyecto-header-right">
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/html.png" alt="HTML5" />
-                                        </div>
+                        {proyectos.map((proyecto, i) => (
+                            <div className="proyecto" key={i}>
+                                <div className="proyecto-header">
+                                    <div className="proyecto-header-left">
+                                        <h3>{proyecto.titulo}</h3>
+                                        <p>{proyecto.descripcion}</p>
                                     </div>
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/css.png" alt="CSS" />
-                                        </div>
-                                    </div>
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/jquery.png" alt="JQuery" />
-                                        </div>
-                                    </div>
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/illustrator.png" alt="Adobe Illustrator" />
-                                        </div>
-                                    </div>
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/figma.png" alt="Figma" />
-                                        </div>
+                                    <div className="proyecto-header-right">
+                                        {proyecto.skills.map((skill, idx) => (
+                                            <div className="skill-container" key={idx}>
+                                                <div className="skill-image">
+                                                    <img src={skill.imagen} alt={skill.nombre} />
+                                                </div>
+                                            </div>
+                                        ))}
                                     </div>
                                 </div>
-                            </div>
-                            <div className="proyecto-body">
-                                <div className="proyecto-image-container">
-                                    <div className="proyecto-image image-left">
-                                        <img src="./assets/img/proyectos/proyecto1.jpg" alt="Proyecto 1"/>
-                                    </div>
-                                </div>
-                                <div className="proyecto-image-container">
-                                    <div className="proyecto-image image-right"></div>
-                                    <div className="proyecto-image image-right"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="proyecto">
-                            <div className="proyecto-header">
-                                <div className="proyecto-header-left">
-                                    <h3>Nombre del Proyecto</h3>
-                                    <p>Breve descripción. Qué tecnologías usaste, qué rol tuviste, etc.</p>
-                                </div>
-                                <div className="proyecto-header-right">
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/shopify.png" alt="Shopify" />
+                                <div className="proyecto-body">
+                                    <div className="proyecto-image-container">
+                                        <div className="proyecto-image image-left">
+                                            {proyecto.imagenes[0] && <img src={proyecto.imagenes[0]} alt={`Imagen 1 de ${proyecto.titulo}`} />}
                                         </div>
                                     </div>
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/figma.png" alt="Figma" />
+                                    <div className="proyecto-image-container">
+                                        <div className="proyecto-image image-right">
+                                            {proyecto.imagenes[1] && <img src={proyecto.imagenes[1]} alt={`Imagen 2 de ${proyecto.titulo}`} />}
+                                        </div>
+                                        <div className="proyecto-image image-right">
+                                            {proyecto.imagenes[2] && <img src={proyecto.imagenes[2]} alt={`Imagen 3 de ${proyecto.titulo}`} />}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div className="proyecto-body">
-                                <div className="proyecto-image-container">
-                                    <div className="proyecto-image image-left"></div>
-                                </div>
-                                <div className="proyecto-image-container">
-                                    <div className="proyecto-image image-right"></div>
-                                    <div className="proyecto-image image-right"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="proyecto">
-                            <div className="proyecto-header">
-                                <div className="proyecto-header-left">
-                                    <h3>Nombre del Proyecto</h3>
-                                    <p>Breve descripción. Qué tecnologías usaste, qué rol tuviste, etc.</p>
-                                </div>
-                                <div className="proyecto-header-right">
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/Bootstrap.png" alt="Bootstrap" />
-                                        </div>
-                                    </div>
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/react.png" alt="React" />
-                                        </div>
-                                    </div>
-                                    <div className="skill-container">
-                                        <div className="skill-image">
-                                            <img src="./assets/img/skills/firebase.png" alt="Firebase" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="proyecto-body">
-                                <div className="proyecto-image-container">
-                                    <div className="proyecto-image image-left"></div>
-                                </div>
-                                <div className="proyecto-image-container">
-                                    <div className="proyecto-image image-right"></div>
-                                    <div className="proyecto-image image-right"></div>
-                                </div>
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
             </section>
