@@ -5,6 +5,7 @@ export const studies = [
     institucion: "Coderhouse",
     año: "2024",
     detalles: ["Adobe Photoshop", "Adobe Illustrator"],
+    description: "Curso intensivo de diseño gráfico con enfoque en herramientas Adobe. Aprendí a crear piezas visuales impactantes y a manipular imágenes con precisión.",
   },
   {
     nivel: "second",
@@ -12,6 +13,8 @@ export const studies = [
     institucion: "Coderhouse",
     año: "2024",
     detalles: ["React JS", "Firebase"],
+    certification: "/assets/img/certificados/66205fe55deea300199bad26.png",
+    description: "Formación en desarrollo de interfaces modernas con React y conexión a bases de datos en tiempo real con Firebase. Proyecto final: una app funcional.",
   },
   {
     nivel: "second",
@@ -19,6 +22,8 @@ export const studies = [
     institucion: "Coderhouse",
     año: "2023",
     detalles: ["JavaScript"],
+    certification: "/assets/img/certificados/658f15169a6ff76e6195c7c1.png",
+    description: "Fundamentos sólidos en JavaScript, trabajando con DOM, eventos, funciones y asincronía. Ejercicios prácticos cada semana.",
   },
   {
     nivel: "second",
@@ -26,6 +31,8 @@ export const studies = [
     institucion: "Coderhouse",
     año: "2023",
     detalles: ["Bootstrap", "SCSS", "CSS3", "HTML5"],
+    certification: "/assets/img/certificados/6500b31b98ed28448d7c031e.png",
+    description: "Curso orientado a diseño responsive y buenas prácticas en maquetado web. Dominio de preprocesadores y frameworks modernos.",
   },
   {
     nivel: "second",
@@ -33,6 +40,8 @@ export const studies = [
     institucion: "Plan Ceibal",
     año: "2021",
     detalles: ["Genexus Core 17", "SQL", "Competencias Transversales"],
+    certification: "/assets/img/certificados/GeneXus17JuniorAnalyst-1.png",
+    description: "Primer acercamiento al mundo IT, con herramientas low-code como GeneXus y conceptos de base de datos. También se trabajaron habilidades blandas.",
   },
   {
     nivel: "second",
@@ -40,9 +49,11 @@ export const studies = [
     institucion: "UdelaR",
     año: "2021",
     detalles: ["Lógica", "Programación 1", "Mat. Discreta 1", "GAL2", "GAL", "CDIVV", "CDIV"],
+    description: "Carrera universitaria con enfoque en pensamiento lógico, estructuras matemáticas y fundamentos de programación estructurada.",
   },
   {
     nivel: "first",
     titulo: "Bachillerato Físico-Matemático",
+    description: "Formación secundaria con fuerte énfasis en matemáticas, física y razonamiento lógico. Base ideal para carreras científicas o tecnológicas.",
   },
 ];
