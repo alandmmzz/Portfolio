@@ -50,6 +50,8 @@ export const studies = [
     año: "2021",
     detalles: ["Lógica", "Programación 1", "Mat. Discreta 1", "GAL2", "GAL", "CDIVV", "CDIV"],
     description: "Carrera universitaria con enfoque en pensamiento lógico, estructuras matemáticas y fundamentos de programación estructurada.",
+    link_name: "Descargar escolaridad",
+    link_href: "#",
   },
   {
     nivel: "first",

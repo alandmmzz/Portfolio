@@ -12,6 +12,9 @@ export default function Studies_Timeline() {
     const [isOpen, setIsOpen] = useState(false);
 
     const imageUrl = selectedStudy?.certification;
+    const link_name = selectedStudy?.link_name;
+    const link_href = selectedStudy?.link_href;
+
 
     return (
         <section id="studies-timeline">
@@ -25,9 +28,13 @@ export default function Studies_Timeline() {
                         <div className="studies-description">
                             <p>{selectedStudy ? selectedStudy.description : "Selecciona un estudio"}</p>
                         </div>
-                        <div className="studies-links">
-                            <a href="#">Ver más detalles</a>
-                        </div>
+
+                        {/* Mostrar imagen solo si hay certificación */}
+                        {link_name && (
+                            <div className="studies-links">
+                                <a href={link_href}>{link_name}</a>
+                            </div>
+                        )}
                     </div>
 
                     {/* Mostrar imagen solo si hay certificación */}
