@@ -7,7 +7,7 @@ export default function Header() {
         <>
             <header>
                 <div className="contenedor">
-                    <h1>su</h1>
+                    <h1>Aland Martinez's Portfolio</h1>
                     <nav>
                         <ul>
                             <li><a href="#sobre-mi">Sobre mí</a></li>

@@ -23,6 +23,19 @@ export default function Skills() {
             <section id="skills">
                 <div className="contenedor">
                     <h2>Mis skills</h2>
+                    <div className="experience-container">
+                        <h3>Experiencia</h3>
+                        <div className='experience-list'>
+                            <div className='experience-item'>
+                                <h4>Desarrollador Frontend</h4>
+                                <p>Empresa XYZ - 2020 - Presente</p>
+                            </div>
+                            <div className='experience-item'>
+                                <h4>Diseñador UI/UX</h4>
+                                <p>Empresa ABC - 2018 - 2020</p>
+                            </div>
+                        </div>
+                    </div>
                     <div className="grid-skills">
                         {skills.map((skill, i) => (
                             <div className="grid-skill-container" key={i}>

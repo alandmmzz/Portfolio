@@ -1,0 +1,101 @@
+
+#hero {
+    background-color: #0e0e0e;
+    background-image: url(./assets/img/hero/bbblurry.svg);
+    background-size: cover;
+    height: calc(100vh + 120px);
+    padding-top: 100px;
+    .contenedor {
+        display: flex;
+
+        .hero-content-left {
+            width: 50%;
+            text-align: left;
+            height: 100%;
+            .hero-presentation {
+                font-size: 22px;
+                font-family: 'DM Sans';
+                color: #ffffff9c;
+                margin-bottom: 1rem;
+                position: relative;
+                bottom: -50px
+            }
+            .hero-main-title {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                gap: 0 1rem;
+                margin-bottom: 0px;
+            }
+            .hero-uxui-image {
+                width: 200px;
+                height: 200px;
+                background-image: url(./assets/img/UXUI-1.png);
+                background-size: 100% auto;
+                background-position: 0px;
+                background-repeat: no-repeat;
+                filter: drop-shadow(0 0 30px #ffd23e6c);
+                cursor: pointer;
+                transition: 0.4s ease;
+            }
+            .hero-uxui-image:hover {
+                transform: scale(1.05) rotate(1.5deg);
+            }
+
+            .hero-and-image {
+                font-size: 50px;
+                font-family: 'DM Sans';
+                color: #e6b140e5;
+                filter: drop-shadow(0 0 30px #ffd23e6c);
+                font-weight: 700;
+                position: relative;
+                top: 15px;
+            }
+
+            .hero-frontend-image {
+                font-family: 'DM Sans';
+                font-size: 50px;
+                color: #e6b140e5;
+                font-weight: 700;
+                filter: drop-shadow(0 0 30px #ffd23e6c);
+                text-align: right;
+                font-style: italic;
+                position: relative;
+                top: 15px;
+            }
+        }
+
+        .hero-main-description {
+            font-size: 20px;
+            font-family: 'DM Sans';
+            text-align: right;
+        }
+        
+        .hero-content-right {
+            width: 50%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            filter: drop-shadow(0 0 30px #ffd23e6c);
+            .hero-image {
+                border: 10px solid transparent;
+                width: 300px;
+                height: 300px;
+                background: url("../assets/img/ProfilePic.jpeg") no-repeat;
+                background-size: cover;
+                background-position: center;
+
+                /* Aplica la máscara */
+                -webkit-mask-image: url("../assets/img/hero/blob-1.svg");
+                -webkit-mask-repeat: no-repeat;
+                -webkit-mask-position: center;
+                -webkit-mask-size: contain;
+
+                mask-image: url("../assets/img/hero/blob-1.svg");
+                mask-repeat: no-repeat;
+                mask-position: center;
+                mask-size: 100%;
+            }
+        }
+    }
+}

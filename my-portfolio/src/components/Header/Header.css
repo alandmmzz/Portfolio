@@ -2,5 +2,36 @@ header {
     position: fixed;
     width: 100%;
     z-index: 3;
-    padding: 10px;
+    padding: 10px 0;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    color: #ffffffb7;
+    padding: 1rem 0;
+}
+
+header .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #ffffff9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 24px;
 }
