@@ -3,35 +3,53 @@ header {
     width: 100%;
     z-index: 3;
     padding: 10px 0;
-    background: transparent;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     color: #ffffffb7;
-    padding: 1rem 0;
-}
-
-header .contenedor {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0;
-
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    color: #ffffff9c;
-    text-decoration: none;
-    font-weight: bold;
+    padding: 10px 0;
+    .contenedor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 10px 25px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        background: #ffffff3b;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
 }
 
 h1 {
+    font-weight: 500;
     font-size: 24px;
 }
+
+nav {
+    display: flex;
+    position: relative;
+    display: flex;
+    gap: 0 2rem;
+    padding: 1rem 2rem;
+    .nav-indicator {
+        position: absolute;
+        bottom: 0;
+        height: 4px; /* grosor del subrayado */
+        width: 0;
+        background: #e2c20b;
+        filter: drop-shadow(0 0 5px #ffd23e6c);
+        border-radius: 2px;
+        transition: all 0.3s ease;
+        margin-bottom: 5px;
+    }
+    .nav-link {
+        position: relative;
+        text-decoration: none;
+        padding: 0;
+        line-height: 10px;
+        color: #ffffff9c;
+        text-decoration: none;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+} 
