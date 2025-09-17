@@ -1,8 +1,8 @@
 
 #hero {
-    background-color: #0e0e0e;
+    /* background-color: #0e0e0e;
     background-image: url(./assets/img/hero/bbblurry.svg);
-    background-size: cover;
+    background-size: cover; */
     height: calc(100vh + 60px);
     padding-top: 100px;
     .contenedor {

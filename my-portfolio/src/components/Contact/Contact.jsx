@@ -6,10 +6,18 @@ export default function Contact() {
     return (
         <>
             <section id="contacto">
-                <div className="contenedor">
-                    <h2>Contacto</h2>
-                    <p>Ponete en contacto conmigo por <a href="mailto:aland@example.com">email</a> o conectá por redes sociales.</p>
-                </div>
+                <a href="#contacto">
+                    <div className="contenedor">
+                        <div className="contacto-hero">
+                            <h2>Proyecto en mente?</h2>
+                            <h3>Trabajemos juntos</h3>
+                        </div>
+                        <div className="contacto-mail">
+                            <p>Ponete en contacto conmigo.</p>
+                            <img src="../assets/img/icons/right-arrow.png" alt="" />
+                        </div>
+                    </div>
+                </a>
             </section>
         </>
     )

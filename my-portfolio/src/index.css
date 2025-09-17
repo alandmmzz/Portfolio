@@ -69,10 +69,10 @@ p {
 }
 
 body {
-  background-image: url(./assets/img/background-main.svg);
+  background-image: url(../assets/img/bbblurry-01.svg);
   background-size: cover;
   background-repeat: repeat;
-  background-blend-mode: color-burn;
+  background-color: #0e0e0e;
   font-family: 'Montserrat', sans-serif;
   color: #222;
   line-height: 1.6;

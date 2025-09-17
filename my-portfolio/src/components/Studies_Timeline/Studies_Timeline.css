@@ -1,6 +1,6 @@
 #studies-timeline {
-    background-image: url('../assets/img/studies-timeline/uuunion.svg');
-    background-size: cover;
+    /* background-image: url('../assets/img/studies-timeline/uuunion.svg');
+    background-size: cover; */
     .contenedor {
         .studies-description-container {
             border: 1px solid gray;
