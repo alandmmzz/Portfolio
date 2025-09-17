@@ -5,27 +5,12 @@ function Studies({ data, onSelectStudy }) {
     const firstLevel = data.filter(est => est.nivel === "first");
     const secondLevel = data.filter(est => est.nivel === "second");
 
-    const [selectedIndex, setSelectedIndex] = useState([null, null]);
+    // -1 = ninguno seleccionado
+    const [activeIndex, setActiveIndex] = useState(-1);
 
-    useEffect(() => {
-        const items = document.querySelectorAll(".study-item.has-details");
-
-        const handleMouseEnter = (e) => e.currentTarget.classList.add("active");
-        const handleMouseLeave = (e) => e.currentTarget.classList.remove("active");
-
-        items.forEach((item) => {
-            item.addEventListener("mouseenter", handleMouseEnter);
-            item.addEventListener("mouseleave", handleMouseLeave);
-        });
-
-        return () => {
-            items.forEach((item) => {
-                item.removeEventListener("mouseenter", handleMouseEnter);
-                item.removeEventListener("mouseleave", handleMouseLeave);
-            });
-        };
-    }, []);
-
+    const handleClick = (index) => {
+        setActiveIndex(index);
+    };
 
     return (
         <div className="studies-timeline">
@@ -34,7 +19,7 @@ function Studies({ data, onSelectStudy }) {
                     {secondLevel
                         .filter((est) => est.institucion === inst)
                         .map((est, j) => (
-                        <li key={j} className={`study-item has-details ${selectedIndex[0] === i && selectedIndex[1] === j ? "selected" : ""}`} onClick={() => { onSelectStudy(est); setSelectedIndex([i,j]); }}>
+                        <li key={j} className={`study-item has-details ${activeIndex === j ? "active" : ""}`} onClick={() => { onSelectStudy(est); setActiveIndex(j); }} >
                             <div className="study-circle"></div>
                             <h4>{est.titulo}</h4>
                             <p>{est.institucion} - {est.año}</p>

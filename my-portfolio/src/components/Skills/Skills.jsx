@@ -31,15 +31,16 @@ export default function Skills() {
         },
         {
             title: "RPA Developer",
-            description: "Asignet - 2022 - 2024",
+            description: `Design and maintain responsive interfaces with HTML, CSS & JS.
+        Built mockups in Figma, icons in Illustrator and assets in Photoshop.
+        Developed interactive features (e.g. dark mode) with vanilla JS and Jquery.
+        Great communication with back-end teams and with big clients like Meta & Microsoft.
+        Built pages from scratch using Bootstrap.`,
             company: "Asignet - 2022 - 2024",
         },
     ];
 
     const refs = useRef([]);
-
-
-
 
     return (
         <section id="skills">

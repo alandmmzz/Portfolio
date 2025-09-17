@@ -3,6 +3,21 @@ import './Hero.css';
 
 export default function Hero() {
 
+    const links = [
+        {
+            title: "LinkedIn",
+            image: "/assets/img/hero/linkedin.png",
+            description: `aland-martinez`,
+            link: `https://www.linkedin.com/in/aland-martinez/`,
+        },
+        {
+            title: "Mail",
+            image: "/assets/img/hero/email.png",
+            description: `alandmmzz@gmail.com`,
+            link: `mailto:alandmmzz@gmail.com`,
+        },
+    ];
+
     return (
         <>
             <section id="hero">
@@ -17,7 +32,12 @@ export default function Hero() {
                         <div className="hero-main-description">
                             <p>Diseñador y programador web rioplatense. Amante del buen diseño, los pixeles prolijos y las cosas que funcionan.</p>
                             <p>Mi camino comenzó con RPA y ahora me dedico al Front-End y UX/UI, creando experiencias digitales modernas y funcionales.</p>
-                            <a href="#contacto" className="btn">Contactame</a>
+                            {links.map((link, i) => (
+                                <a href={link.link} className="link-container" key={i}>
+                                    <span className="link-description">{link.description}</span>
+                                    <img src={link.image} alt={link.title} />
+                                </a>
+                            ))}
                         </div>
                     </div>
                     <div className="hero-content-right">

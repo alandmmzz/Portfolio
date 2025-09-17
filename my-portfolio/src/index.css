@@ -191,14 +191,6 @@ section {
   }
 }
 
-footer {
-  background: #111;
-  color: #ccc;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 2rem;
-}
-
 .hidden {
   width: 0 !important;
   height: 0 !important;

@@ -10,7 +10,7 @@
             width: 50%;
         }
     }
-    .experience-container{
+    .experience-container {
         width: 50%;
         padding: 1rem;
         display: flex;
@@ -18,8 +18,15 @@
         .experience-row {
             display: flex;
             gap: 10px;
-            h4, .experience-item-description {
-                margin-bottom: 5px;
+            .experience-item {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                margin-bottom: 20px;
+                .experience-item-description {
+                    font-size: 0.9rem;
+                    color: #ccc;
+                }
             }
             
         }
@@ -53,10 +60,10 @@
     }
     .grid-skills {
         width: 50%;
-        padding: 1rem;
+        padding: 2rem;
         display: flex;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 10px;
         justify-content: left;
 
         .grid-skill-container {
@@ -65,8 +72,8 @@
             transition: 0.4s;
 
             .skill-image {
-                width: 60px;
-                height: 60px;
+                width: 50px;
+                height: 50px;
                 border-radius: 10px;
                 backdrop-filter: blur(20px);
                 -webkit-backdrop-filter: blur(20px);
@@ -78,8 +85,8 @@
                 flex-wrap: wrap;
 
                 img {
-                    width: 32px;
-                    height: 32px;
+                    width: 24px;
+                    height: 24px;
                 }
             }
 
@@ -90,7 +97,8 @@
         }
 
         .grid-skill-container:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
+            filter: drop-shadow(0 0 5px #ffd23e6c);
         }
     }
 }
