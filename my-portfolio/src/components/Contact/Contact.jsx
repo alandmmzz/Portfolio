@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './Contact.css';
 
 export default function Contact() {
@@ -6,7 +7,7 @@ export default function Contact() {
     return (
         <>
             <section id="contacto">
-                <a href="#contacto">
+                <Link to="/contacto" >
                     <div className="contenedor">
                         <div className="contacto-hero">
                             <h2>Proyecto en mente?</h2>
@@ -16,8 +17,8 @@ export default function Contact() {
                             <p>Ponete en contacto conmigo.</p>
                             <img src="../assets/img/icons/right-arrow.png" alt="" />
                         </div>
-                    </div>
-                </a>
+                    </div>                   
+                </Link>
             </section>
         </>
     )

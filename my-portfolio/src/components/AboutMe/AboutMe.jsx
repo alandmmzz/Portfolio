@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./AboutMe.css";
 
 export default function Contact() {
@@ -34,7 +35,9 @@ export default function Contact() {
                         </p>
                         <div className="about-me-link">
                             <p>Interesado/a en ver mis proyectos?</p>
-                            <a href="#projects" className="btn">Ver proyectos</a>
+                            <Link to="/proyectos" className="btn">
+                                Ver proyectos
+                            </Link>
                         </div>
                     </div>
                 </div>

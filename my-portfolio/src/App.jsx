@@ -1,25 +1,26 @@
 import React from "react";
-import Header from './components/Header/Header';
-import Hero from './components/Hero/Hero';
-import Skills from './components/Skills/Skills';
-import AboutMe from './components/AboutMe/AboutMe';
-import Projects from './components/Projects/Projects';
-import Studies_Timeline from './components/Studies_Timeline/Studies_Timeline';
-import Contact from './components/Contact/Contact';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NavBar from './components/NavBar/NavBar';
+import ScrollToTop from './pages/ScrollToTop';
 import Footer from './components/Footer/Footer';
+import HomeContainer from './pages/Home/HomeContainer';
+import ProjectsContainer from './pages/Projects/ProjectsContainer';
+import ContactContainer from './pages/Contact/ContactContainer';
 
 function App() {
 
   return (
     <>
-      <Header />
-      <Hero />
-      <Skills />
-      <AboutMe />
-      {/* <Projects /> */}
-      <Studies_Timeline />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        <NavBar />
+        <ScrollToTop />
+        <Routes>
+          <Route exact path="/" element={<HomeContainer />} />
+          <Route exact path="/proyectos" element={<ProjectsContainer />} />
+          <Route exact path="/contacto" element={<ContactContainer />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 }

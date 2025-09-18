@@ -16,6 +16,12 @@ export default function Hero() {
             description: `alandmmzz@gmail.com`,
             link: `mailto:alandmmzz@gmail.com`,
         },
+        {
+            title: "GitHub",
+            image: "/assets/img/hero/github.png",
+            description: `alandmmzz`,
+            link: `https://github.com/alandmmzz`,
+        },
     ];
 
     return (
