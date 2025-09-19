@@ -1,3 +1,9 @@
+.proyecto-header-left {
+    p {
+        color: #ccc;
+    }
+}
+
 .proyecto-body {
     padding: 10px;
     overflow-x: scroll;

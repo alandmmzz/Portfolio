@@ -4,10 +4,9 @@
     background-image: url(./assets/img/hero/bbblurry.svg);
     background-size: cover; */
     height: calc(100vh + 60px);
-    padding-top: 100px;
+    padding-top: 60px;
     .contenedor {
         display: flex;
-
         .hero-content-left {
             width: 50%;
             text-align: left;
@@ -115,9 +114,31 @@
         .hero-content-right {
             width: 50%;
             display: flex;
-            justify-content: end;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             filter: drop-shadow(0 0 30px #ffd23e6c);
+            .hero-status {
+                display: flex;
+                align-items: center;
+                backdrop-filter: blur(20px);
+                -webkit-backdrop-filter: blur(20px);
+                background: #285ba82d;
+                border: 1px solid #ffffff1a;
+                padding: 10px 15px;
+                border-radius: 10px;
+                margin-top: 10px;
+                color: #ccc;
+                .hero-status-icon {
+                    width: 12px;
+                    height: 12px;
+                    border-radius: 50%;
+                    background: #3a7bdd;
+                    filter: drop-shadow(0 0 5px #3a7bdd);
+                    display: inline-block;
+                    margin-right: 10px;
+                }
+            }
             .hero-image {
                 border: 10px solid transparent;
                 width: 300px;

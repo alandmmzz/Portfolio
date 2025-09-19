@@ -1,32 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
-import Captions from "yet-another-react-lightbox/plugins/captions";
+import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
-import './Studies_Timeline.css';
-import Studies from './Studies';
-import { studies } from './studiesData.js';
+import "./Studies_Timeline.css";
+import Studies from "./Studies";
+import { studies } from "./studiesData.js";
 
 export default function Studies_Timeline() {
     const [selectedStudy, setSelectedStudy] = useState(null);
+
     const [isOpen, setIsOpen] = useState(false);
 
     const imageUrl = selectedStudy?.certification;
     const link_name = selectedStudy?.link_name;
     const link_href = selectedStudy?.link_href;
 
-
     return (
         <section id="studies-timeline">
             <div className="contenedor">
                 <h2>Mis estudios</h2>
                 <div className="studies-description-container">
-                    <div className="container-left" style={selectedStudy?.certification ? {} : { width: "100%" }}>
+                    <div
+                        className="container-left"
+                        style={
+                            selectedStudy?.certification
+                                ? {}
+                                : { width: "100%" }
+                        }
+                    >
                         <h3 className="studies-title">
-                            {selectedStudy ? selectedStudy.titulo : "Selecciona un estudio"}
+                            {selectedStudy
+                                ? selectedStudy.titulo
+                                : "Selecciona un estudio"}
                         </h3>
                         <div className="studies-description">
-                            <p>{selectedStudy ? selectedStudy.description : "Selecciona un estudio"}</p>
+                            <p>
+                                {selectedStudy
+                                    ? selectedStudy.description
+                                    : "Selecciona un estudio"}
+                            </p>
                         </div>
 
                         {/* Mostrar imagen solo si hay certificación */}
@@ -45,7 +58,7 @@ export default function Studies_Timeline() {
                                     <img
                                         src={imageUrl}
                                         alt="Certificado"
-                                        style={{ cursor: 'zoom-in' }}
+                                        style={{ cursor: "zoom-in" }}
                                         onClick={() => setIsOpen(true)}
                                     />
                                 </div>
@@ -59,13 +72,12 @@ export default function Studies_Timeline() {
                 </div>
             </div>
 
-            {/* Lightbox */}
-            {isOpen && imageUrl && (
+            {isOpen && (
                 <Lightbox
-                    mainSrc={imageUrl}
-                    onCloseRequest={() => setIsOpen(false)}
-                    imageTitle={selectedStudy?.titulo}
-                    imageCaption={selectedStudy?.description || 'Certificado'}
+                    open={isOpen}
+                    close={() => setIsOpen(false)}
+                    plugins={[Zoom]}
+                    slides={[{ src: imageUrl }]}
                 />
             )}
         </section>

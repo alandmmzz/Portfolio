@@ -48,6 +48,10 @@ export default function Hero() {
                     </div>
                     <div className="hero-content-right">
                         <div className="hero-image"></div>
+                        <div className="hero-status">
+                            <div className="hero-status-icon"></div>
+                            <div className="hero-status-text">Disponible para nuevos proyectos</div>
+                        </div>
                     </div>
                 </div>
             </section>
