@@ -5,16 +5,16 @@ export default function Hero() {
 
     const links = [
         {
-            title: "LinkedIn",
-            image: "/assets/img/hero/linkedin.png",
-            description: `aland-martinez`,
-            link: `https://www.linkedin.com/in/aland-martinez/`,
-        },
-        {
             title: "Mail",
             image: "/assets/img/hero/email.png",
             description: `alandmmzz@gmail.com`,
             link: `mailto:alandmmzz@gmail.com`,
+        },
+        {
+            title: "LinkedIn",
+            image: "/assets/img/hero/linkedin.png",
+            description: `aland-martinez`,
+            link: `https://www.linkedin.com/in/aland-martinez/`,
         },
         {
             title: "GitHub",

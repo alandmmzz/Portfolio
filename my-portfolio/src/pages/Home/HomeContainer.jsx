@@ -13,7 +13,6 @@ export default function HomeContainer() {
             <Hero />
             <Skills />
             <AboutMe />
-            {/* <Projects /> */}
             <Studies_Timeline />
             <Contact />
         </>

@@ -78,6 +78,24 @@ body {
   line-height: 1.6;
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+}
+        
+body::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: transparent;
+    border: 0;
+}
+            
+body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: #ffffff85;
+    background-clip: content-box;
+}
+
 section {
   padding: 3rem 1rem;
 }
@@ -86,8 +104,6 @@ section {
   max-width: 1000px;
   margin: auto;
 }
-
-
 
 .grid-proyectos {
   display: flex;
@@ -199,3 +215,65 @@ section {
     display: none;
   }
 }
+
+.focus-effect {
+  position: relative;
+  span {
+    border-radius: 10px;
+  }
+  .effect-8 {
+    border: 1px solid #cccccc4d;
+    padding: 7px 14px 9px;
+    transition: 1s;
+  }
+  .effect-8~.focus-border:before,
+  .effect-8~.focus-border:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #e2c20b;
+    transition: 0.6s;
+  }
+
+  .effect-8~.focus-border:after {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 0;
+  }
+
+  .effect-8~.focus-border i:before,
+  .effect-8~.focus-border i:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 0;
+    background-color: #e2c20b;
+    transition: 0.6s;
+  }
+
+  .effect-8~.focus-border i:after {
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+  }
+
+  .effect-8:focus~.focus-border:before,
+  .effect-8:focus~.focus-border:after {
+    width: 100%;
+    transition: 0.6s;
+  }
+
+  .effect-8:focus~.focus-border i:before,
+  .effect-8:focus~.focus-border i:after {
+    height: 100%;
+    transition: 0.6s;
+  }
+}
+

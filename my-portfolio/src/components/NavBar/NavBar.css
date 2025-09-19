@@ -2,9 +2,9 @@ header {
     position: fixed;
     width: 100%;
     z-index: 3;
-    padding: 10px 0;
+    padding: 0 0 10px;
     color: #ffffffb7;
-    padding: 10px 0;
+    top: -8px;
     .contenedor {
         display: flex;
         justify-content: space-between;
@@ -13,7 +13,7 @@ header {
         margin: 0 auto;
         padding: 10px 25px;
         border: 1px solid rgba(255, 255, 255, 0.2);
-        border-radius: 10px;
+        border-radius: 0 0 10px 10px;
         background: #ffffff3b;
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
