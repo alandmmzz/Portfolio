@@ -1,0 +1,31 @@
+.proyecto-header-left {
+    p {
+        color: #ccc;
+    }
+}
+
+.proyecto-body {
+    padding: 10px;
+    overflow-x: scroll;
+}
+.proyecto-body::-webkit-scrollbar {
+    width: 10px;
+}
+        
+.proyecto-body::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: transparent;
+    border: 0;
+}
+            
+.proyecto-body::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: #ffffff7a;
+    background-clip: content-box;
+}
+
+#proyectos {
+    padding-top: 100px;
+}

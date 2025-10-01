@@ -1,0 +1,73 @@
+#about-me {
+    /* background-color: #0e0e0e;
+    background-image: url('../assets/img/hero/bbblurry.svg') !important;
+    background-size: cover; */
+
+    .contenedor {
+        display: flex;
+        gap: 40px;
+        .about-me-image-container {
+            width: 50%;
+            overflow: hidden;
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .about-me-description {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #ccc;
+        }
+        .about-me-link {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: auto;
+            gap: 10px;
+            p {
+                color: white;
+                align-self: center;
+            }
+            .btn {
+                position: relative;
+                margin-right: 1rem;
+                color: #8b4a15;
+                padding: 0.5rem 2rem 0.5rem 1rem;
+                border-radius: 5px;
+                font-weight: 600;
+                background: linear-gradient(10deg, rgb(216, 152, 34) 0%, rgba(253, 236, 45, 1) 100%);
+                filter: drop-shadow(0 0 5px #ffd23e6c);
+                text-decoration: none;
+                transition: 0.4s;
+                z-index: 2;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+            .btn::after {
+                content: "";
+                display: block;
+                width: 16px;
+                height: 16px;
+                background: url('../assets/img/icons/right-arrow.png');
+                background-size: cover;
+                position: absolute;
+                right: 12px;
+                top: calc(50% - 8px);
+                bottom: 50%;
+                transition: 0.4s;
+                z-index: 1;
+            }
+            .btn:hover:after {
+                right: 5px;
+            }
+        }
+    }
+}

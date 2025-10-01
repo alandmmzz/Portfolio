@@ -1,0 +1,85 @@
+#services {
+    min-height: calc(100vh);
+    padding-top: 100px;
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 20px;
+        h2 {
+            width: 100%;
+        }
+        .service-card {
+            position: relative;
+            flex: 1 1 calc(33% - 10px); /* Crece y se encoge, con un tamaño base de 300px */
+            height: 60vh;
+            min-height: 300px;
+            border: #ffffff42 solid 1px;
+            border-radius: 10px;
+            background-image: url('../../../public/assets/img/services/react-development.webp');
+            background-size: cover;      /* hace que la imagen cubra toda la card */
+            background-position: center; /* centra la imagen */
+            background-repeat: no-repeat;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            filter: drop-shadow(0 0 15px #7c7c7c6c);
+            .card-header {
+                display: flex;
+                background-color: #000000a1; /* fondo semitransparente para mejorar la legibilidad */
+                padding: 20px;
+                color: #e4e4e4;   /* texto sobre la imagen */
+                h3 {
+                    margin: -2px 0 0 10px;
+                    font-size: 1.5rem;
+                }
+            }
+            .card-body {
+                background-color: #000000de; /* fondo semitransparente para mejorar la legibilidad */
+                padding: 20px;
+                height: 100%;
+                p {
+
+                    color: #e0e0e0;   /* texto sobre la imagen */
+                    font-size: 1rem;
+                    line-height: 1.4;
+                }
+            }
+            &:hover {
+                box-shadow: 0 0 15px #ffd23e6c;
+                transform: scale(1.01);
+                transition: transform 0.4s, box-shadow 0.4s;
+            }
+            &:nth-child(3) {
+                background-image: url('../../../public/assets/img/services/shopify-development.webp');
+            }
+            &:nth-child(4) {
+                background-image: url('../../../public/assets/img/services/wordpress-development.jpg');
+            }
+        }
+        .contact-link {
+            width: 100%;
+            text-align: end;
+            margin-top: 20px;
+            p {
+                color: #ccc;
+                font-size: 1.1rem;
+                margin-bottom: 20px;
+            }
+            .btn {
+                background-color: #e2c20b;
+                color: #2c1903;
+                padding: 10px 20px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background-color 0.4s, color 0.4s;
+                &:hover {
+                    background-color: #ffd23e;
+                    color: #000000;
+                }
+            }
+        }
+    }
+}
