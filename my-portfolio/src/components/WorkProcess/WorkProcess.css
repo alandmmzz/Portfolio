@@ -4,6 +4,9 @@
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 20px;
+        @media screen and (max-width: 600px) {
+            gap: 10px;
+        }
         h2 {
             width: 100%;
             margin-bottom: 20px;
@@ -29,6 +32,9 @@
             color: #e0e0e0;   /* texto sobre la imagen */
             font-size: 1rem;
             line-height: 1.4;
+            @media screen and (max-width: 600px) {
+                padding: 10px;
+            }
             svg {
                 margin-top: 10px;
                 color: #ffffff;

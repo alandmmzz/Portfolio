@@ -1,8 +1,4 @@
 #skills {
-    /* background-color: #0e0e0e;
-    background-image: url(../assets/img/skills/bbblurry.svg) !important;
-    background-size: cover; */
-    
     .contenedor {
         display: flex;
         flex-wrap: wrap;
@@ -80,7 +76,8 @@
         order: 4;
         @media screen and (max-width: 800px) {
             width: 100%;
-            padding: 1.5rem 0rem;
+            padding: 1rem 0rem 0;
+            gap: 0px;
         }
         .grid-skill-container {
             padding: 5px;
@@ -106,7 +103,7 @@
                 }
             }
 
-            h3 {
+            p {
                 text-align: center;
                 margin-top: 0.5rem;
             }

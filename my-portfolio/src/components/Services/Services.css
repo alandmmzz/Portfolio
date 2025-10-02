@@ -5,6 +5,9 @@
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 20px;
+        @media (max-width: 700px) {
+            gap: 10px;
+        }  
         h2 {
             width: 100%;
         }
@@ -23,8 +26,8 @@
             justify-content: space-between;
             filter: drop-shadow(0 0 15px #7c7c7c6c);
             @media (max-width: 700px) {
-    flex: 1 1 100%; /* ocupan toda la fila: 1 por línea */
-}
+                flex: 1 1 100%;
+            }   
             .card-header {
                 display: flex;
                 flex-direction: column;

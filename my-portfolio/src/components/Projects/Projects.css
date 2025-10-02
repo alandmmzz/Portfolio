@@ -1,31 +1,114 @@
-.proyecto-header-left {
-    p {
-        color: #ccc;
+#proyectos {
+    padding-top: 100px;
+}
+
+.grid-proyectos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+    @media screen and (max-width: 600px) {
+        gap: 10px;
+        margin-top: 1rem;
+        .proyecto-header {
+            flex-direction: column;
+            .proyecto-header-right {
+                justify-content: flex-end;
+            }
+        }
     }
 }
 
-.proyecto-body {
-    padding: 10px;
-    overflow-x: scroll;
-}
-.proyecto-body::-webkit-scrollbar {
-    width: 10px;
-}
-        
-.proyecto-body::-webkit-scrollbar-track {
-    border-radius: 8px;
-    background-color: transparent;
-    border: 0;
-}
-            
-.proyecto-body::-webkit-scrollbar-thumb {
-    border-radius: 8px;
+.proyecto {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: #ffffff7a;
-    background-clip: content-box;
-}
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 
-#proyectos {
-    padding-top: 100px;
+    .proyecto-header {
+        display: flex;
+        margin-bottom: 20px;
+        justify-content: space-between;
+        gap: 20px;
+        .proyecto-header-left {
+            p {
+                color: #ccc;
+            }
+        }
+        .proyecto-header-right {
+            display: flex;
+            gap: 10px;
+            .skill-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                .skill-image {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px;
+                    backdrop-filter: blur(20px);
+                    -webkit-backdrop-filter: blur(20px);
+                    background: rgba(255, 255, 255, 0.1);
+                    justify-self: center;
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    flex-wrap: wrap;
+
+                    img {
+                        justify-self: center;
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+    }
+
+    .proyecto-body {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 70vh;
+        gap: 10px;
+        padding: 10px;
+        overflow-x: scroll;
+        @media screen and (max-width: 600px) {
+            height: auto;
+        }
+        .proyecto-image {
+            border-radius: 10px;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            /* pa’ que funcione en Safari */
+            background: rgba(255, 255, 255, 0.1);
+            /* blanco-transparente */
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+        }
+    }
+    .proyecto-body::-webkit-scrollbar {
+        width: 10px;
+    }     
+    .proyecto-body::-webkit-scrollbar-track {
+        border-radius: 8px;
+        background-color: transparent;
+        border: 0;
+    }          
+    .proyecto-body::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        background: #ffffff7a;
+        background-clip: content-box;
+    }
 }

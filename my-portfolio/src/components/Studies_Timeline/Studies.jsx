@@ -3,7 +3,6 @@ import { useState, useEffect } from 'react';
 function Studies({ data, onSelectStudy }) {
     const secondLevel = data.filter(est => est.nivel === "second");
 
-    // -1 = ninguno seleccionado
     const [activeIndex, setActiveIndex] = useState(-1);
 
     const handleClick = (index) => {

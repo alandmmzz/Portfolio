@@ -70,7 +70,7 @@ export default function Skills() {
               <div className="skill-image">
                 <img src={skill.image} alt={skill.name} />
               </div>
-              <h3>{skill.name}</h3>
+              <p>{skill.name}</p>
             </div>
           ))}
         </div>
