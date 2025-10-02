@@ -1,5 +1,8 @@
 #proyectos {
     padding-top: 100px;
+    @media screen and (max-width: 800px) {
+        padding-top: 65px;
+    }
 }
 
 .grid-proyectos {
@@ -57,11 +60,19 @@
                     justify-content: center;
                     align-content: center;
                     flex-wrap: wrap;
-
                     img {
                         justify-self: center;
                         width: 32px;
                         height: 32px;
+                    }
+                    @media screen and (max-width: 600px) {
+                        border-radius: 5px;
+                        width: 30px;
+                        height: 30px;
+                            img {
+                                width: 16px;
+                                height: 16px;
+                        }
                     }
                 }
             }
@@ -78,6 +89,7 @@
         overflow-x: scroll;
         @media screen and (max-width: 600px) {
             height: auto;
+            padding: 0px;
         }
         .proyecto-image {
             border-radius: 10px;

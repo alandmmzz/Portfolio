@@ -3,6 +3,9 @@
     min-height: calc(100vh - 80px);
     padding-top: 100px;
     padding: 100px 1rem;
+    @media screen and (max-width: 800px) {
+        padding-top: 65px;
+    }
 }
 
 
@@ -72,7 +75,6 @@ input:focus, textarea:focus {
     color: #6e4f14;
     padding: 10px 2rem 10px 1rem;
     border-radius: 6px;
-    font-size: medium;
     font-weight: 600;
     background: linear-gradient(10deg, rgb(216, 152, 34) 0%, rgba(253, 236, 45, 1) 100%);
     filter: drop-shadow(0 0 5px #ffd23e6c);

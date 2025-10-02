@@ -135,7 +135,7 @@ body::-webkit-scrollbar-thumb {
 
 section {
   padding: 3rem 1rem;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 800px) {
     padding: 1rem 1rem;
   }
 }

@@ -4,12 +4,12 @@
         flex-wrap: wrap;
         justify-content: space-around;
         gap: 20px;
-        @media screen and (max-width: 600px) {
+        @media (max-width: 800px) {
             gap: 10px;
         }
         h2 {
             width: 100%;
-            margin-bottom: 20px;
+            margin-bottom: 6px;
         }
         .proccess-card {
             position: relative;
