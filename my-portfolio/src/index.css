@@ -106,7 +106,7 @@ p, a, input, textarea {
 }
 
 body {
-  background-image: url(./assets/img/bbblurry-01.svg);
+  background-image: url(../assets/img/bbblurry-01.svg);
   background-size: cover;
   background-repeat: repeat;
   background-color: #0e0e0e;
