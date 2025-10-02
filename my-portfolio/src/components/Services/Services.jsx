@@ -17,7 +17,7 @@ export default function Services() {
                 <div className="card-body">
                     <p>Desarrollo de cualquier tipo de solución web completamente hecha a partir de React, sin limitaciones de una plantilla y con todos los features que se requieran hechos a la medida.</p>
                 </div>
-                <img src="../../../public/assets/img/services/react-development.webp" alt="React" />
+                <img src="/assets/img/services/react-development.webp" alt="React" />
             </div>
             <div className="service-card">
                 <div className="card-header">
@@ -27,7 +27,7 @@ export default function Services() {
                 <div className="card-body">
                     <p>Desarrollo de un e-shop hecho a partir de la herramienta Shopify. Perfecto para tiendas que buscan una solución rápida sin estresarse por un diseño complejo.</p>
                 </div>
-                <img src="../../../public/assets/img/services/shopify-development.webp" alt="Shopify" />
+                <img src="/assets/img/services/shopify-development.webp" alt="Shopify" />
             </div>
             <div className="service-card">
                 <div className="card-header">
@@ -37,7 +37,7 @@ export default function Services() {
                 <div className="card-body">
                     <p>Desarrollo de un sitio web usando una plantilla de Wordpress, ideal para quienes buscan crear un sitio web de forma rápida sin salirse mucho del molde.</p>
                 </div>
-                <img src="../../../public/assets/img/services/wordpress-development.jpg" alt="Wordpress" />
+                <img src="/assets/img/services/wordpress-development.jpg" alt="Wordpress" />
             </div>
             <div className="contact-link">
               <p>Buscas una cotización?</p>

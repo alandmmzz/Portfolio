@@ -91,7 +91,7 @@
                 display: block;
                 width: 16px;
                 height: 16px;
-                background: url('../assets/img/icons/right-arrow.png');
+                background: url('/assets/img/icons/right-arrow.png');
                 background-size: cover;
                 position: absolute;
                 right: 12px;

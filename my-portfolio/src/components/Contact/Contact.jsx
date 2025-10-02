@@ -15,7 +15,7 @@ export default function Contact() {
                         </div>
                         <div className="contacto-mail">
                             <p>Ponete en contacto conmigo.</p>
-                            <img src="../assets/img/icons/right-arrow.png" alt="" />
+                            <img src="/assets/img/icons/right-arrow.png" alt="" />
                         </div>
                     </div>                   
                 </Link>

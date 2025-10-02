@@ -5,7 +5,7 @@ import "./NavBar.css";
 export default function NavBar() {
   const indicatorRef = useRef(null);
   const navRef = useRef(null);
-  const location = useLocation(); // 👈
+  const location = useLocation();
 
   useEffect(() => {
     const activeLink = navRef.current.querySelector(".nav-link.active");

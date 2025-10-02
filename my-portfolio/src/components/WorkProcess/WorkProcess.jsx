@@ -15,7 +15,7 @@ export default function WorkProcess() {
               Entendemos la problemática para buscar la mejor solución, el
               objetivo de la página, los requerimientos, la audiencia, etc.
             </p>
-            <img src="../../public/assets/img/working_process/research.jpg" alt="Research" />
+            <img src="/assets/img/working_process/research.jpg" alt="Research" />
           </div>
           <div className="proccess-card">
             <FaPen size={32} />
@@ -24,7 +24,7 @@ export default function WorkProcess() {
               Se diseña un prototipo de la solución a implementar, buscando la mejor
               experiencia de usuario y la mejor interfaz posible.
             </p>
-            <img src="../../public/assets/img/working_process/mockup.jpg" alt="Mockup" />
+            <img src="/assets/img/working_process/mockup.jpg" alt="Mockup" />
           </div>
           <div className="proccess-card">
             <FaCode size={32} />
@@ -33,7 +33,7 @@ export default function WorkProcess() {
                 Se desarrolla la solución a partir del prototipo, implementando
                 todas las funcionalidades necesarias y optimizando el rendimiento.
             </p>
-            <img src="../../public/assets/img/working_process/developing.jpg" alt="Developing" />
+            <img src="/assets/img/working_process/developing.jpg" alt="Developing" />
           </div>
           <div className="proccess-card">
             <FaRocket size={32} />
@@ -42,7 +42,7 @@ export default function WorkProcess() {
                 Se lanza la solución al público, asegurando que todo funcione
                 correctamente y se monitorea su desempeño.
             </p>
-            <img src="../../public/assets/img/working_process/launch.webp" alt="Launch" />
+            <img src="/assets/img/working_process/launch.webp" alt="Launch" />
           </div>
         </div>
       </section>
