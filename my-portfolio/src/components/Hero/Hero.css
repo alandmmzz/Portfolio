@@ -3,6 +3,9 @@
     height: calc(100vh);
     padding-top: 60px;
     display: flex;
+    @media screen and (max-width: 600px) {
+        display: none;
+    }
     .contenedor {
         display: flex;
         align-self: center;

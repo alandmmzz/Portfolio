@@ -20,8 +20,6 @@ export default function Studies_Timeline() {
         <section id="studies-timeline">
             <div className="contenedor">
                 <h2>Mis estudios</h2>
-                
-
                 <div className="studies-content">
                     <Studies data={studies} onSelectStudy={setSelectedStudy} />
                 </div>

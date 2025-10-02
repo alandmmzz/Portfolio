@@ -14,15 +14,24 @@ header {
         padding: 10px 25px;
         background: #0f0f0f;
         filter: drop-shadow(0 0 30px #ffd23e17);
+        @media screen and (max-width: 800px) {
+            padding: 8px 25px 5px;
+        }
     }
     
     .clear {
         width: 172.69px;
+        @media screen and (max-width: 800px) {
+            display: none;
+        }
     }
 }
 
 .main-title {
     text-decoration: none;
+    @media screen and (max-width: 800px) {
+        display: none;
+    }
     h1 {
         text-decoration: none;
         font-weight: 500;
@@ -41,6 +50,12 @@ nav {
     display: flex;
     gap: 0 2rem;
     padding: 1rem 2rem;
+    
+    @media screen and (max-width: 800px) {
+        width: 100%;
+        justify-content: space-around;
+        padding: 0.5rem 1rem 0.8rem;
+    }
     .nav-indicator {
         position: absolute;
         bottom: 0;

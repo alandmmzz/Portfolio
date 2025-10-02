@@ -4,12 +4,13 @@
     .contenedor {
         display: flex;
         flex-wrap: wrap;
+        gap: 0 20px;
         h2 {
             margin-bottom: 20px;
             width: 100%;
         }
         .studies-content {
-            width: 50%;
+            width: calc(50% - 10px);
             display: flex;
             flex-direction: column;
             transition: 0.4s;
@@ -20,23 +21,6 @@
                 justify-content: center;
                 align-items: flex-end;
 
-
-                ul.second-level-studies > li.selected > div.study-circle::before {
-                    content: "";
-                    width: 30px;
-                    height: 30px;
-                    background-color: white;
-                    position: absolute;
-                    top: 10px;
-                    left: 10px;
-                    display: block;
-                    border-radius: 50%;
-                }
-                ul.second-level-studies > li.active.selected > div.study-circle::before {
-                    top: 7px;
-                    left: 7px;
-                }
-
                 ul.first-level-studies li,
                 ul.second-level-studies li {
                     justify-self: start;
@@ -44,10 +28,16 @@
                     grid-template-columns: 50px auto;
                     gap: 0 10px;
                     cursor: pointer;
+                    @media screen and (max-width: 700px) {
+                        grid-template-columns: 30px auto;
+                    }
                     p {
                         position: relative;
                         top: -20px;
                         opacity: 0.6;
+                        @media screen and (max-width: 700px) {
+                            top: -3px;
+                        }
                     }
 
                     div.study-circle {
@@ -58,6 +48,10 @@
                         grid-row: span 2;
                         margin-bottom: 40px;
                         justify-self: center;
+                        @media screen and (max-width: 700px) {
+                            width: 30px;
+                            height: 30px;
+                        }
                     }
 
                     div.study-circle::after {
@@ -73,6 +67,9 @@
                         position: relative;
                         justify-self: center;
                         top: 47px;
+                        @media screen and (max-width: 700px) {
+                            top: 27px;
+                        }
                     }
 
                     ul.studies-details-list {
@@ -90,11 +87,18 @@
                                 margin-bottom: 20px;
                                 transition: border 1s;
                                 border: 3px solid #e2c20b;
+                                @media screen and (max-width: 700px) {
+                                    width: 15px;
+                                    height: 15px;
+                                }
                             }
 
                             div.study-circle::after {
                                 top: 30px;
                                 height: 20px;
+                                @media screen and (max-width: 700px) {
+                                    top: 12px;
+                                }
                             }
                         }
                     }
@@ -111,15 +115,10 @@
                         div.study-circle::after {
                             background: #e2c20b;
                             filter: drop-shadow(0 0 5px #ffd23e6c);
-                            top: 47px;
                         }
 
                         ul.studies-details-list {
                             display: block;
-
-                            div.study-circle::after {
-                                top: 27px !important;
-                            }
 
                             li:last-child div.study-circle::after {
                                 background: rgba(255, 255, 255, 0.2);
@@ -141,7 +140,7 @@
             }
         }
         .studies-description-container {
-            width: 50%;
+            width: calc(50% - 10px);
             border: 1px solid gray;
             border-radius: 10px;
             padding: 1rem 1.5rem;
@@ -149,11 +148,18 @@
             flex-direction: column;
             gap: 20px;
             height: min-content;
+            @media screen and (max-width: 600px) {
+                padding: 0.5rem 0.8rem;
+            }
             .container-data {
                 .studies-title {
                     color: var(--clr-light-a0);
                     font-family: 'DM Sans', sans-serif;
                     opacity: 0.8;
+                    margin-bottom: 10px;
+                    @media screen and (max-width: 600px) {
+                        text-align: center;
+                    }
                 }
 
                 .studies-description {
@@ -161,6 +167,30 @@
                     color: var(--clr-light-a0);
                     font-family: 'DM Sans', sans-serif;
                     opacity: 0.8;
+                }
+                .studies-links {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    a {
+                        text-decoration: none;
+                        color: #ccc;
+                        font-family: "DM Sans", sans-serif;
+                        backdrop-filter: blur(20px);
+                        -webkit-backdrop-filter: blur(20px);
+                        background: #ffffff1c;
+                        padding: 10px 20px;
+                        border-radius: 30px;
+                        text-align: center;
+                        @media screen and (max-width: 600px) {
+                            padding: 5px 15px;
+                        }
+                        &:hover {
+                            background: #ffffff38;
+                            color: #fff;
+                            transition: background 0.4s, color 0.4s;
+                        }
+                    }
                 }
             }
 

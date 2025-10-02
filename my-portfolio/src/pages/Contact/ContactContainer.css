@@ -2,11 +2,9 @@
 #contact-form {
     min-height: calc(100vh - 80px);
     padding-top: 100px;
+    padding: 100px 1rem;
 }
 
-.contact-section {
-  padding: 4rem 0;
-}
 
 .contact-section h2 {
   text-align: center;
@@ -44,7 +42,6 @@ input, textarea {
   padding: 0.8rem 1rem;
   border: 1px solid #cccccc42;
   border-radius: 6px;
-  font-size: 1rem;
   outline: none;
   transition: border 0.4s;
   background-color: #cccccc21;

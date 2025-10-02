@@ -8,6 +8,15 @@
         flex-wrap: wrap;
         h2 {
             width: 50%;
+            @media screen and (max-width: 800px) {
+                width: 100%;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            flex-direction: column;
+            h2:nth-child(2) {
+                order: 3;
+            }
         }
     }
     .experience-container {
@@ -15,6 +24,10 @@
         padding: 1.5rem;
         display: flex;
         flex-direction: column;
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            padding: 1.5rem 0rem;
+        }
         .experience-row {
             display: flex;
             gap: 10px;
@@ -24,7 +37,6 @@
                 gap: 5px;
                 margin-bottom: 20px;
                 .experience-item-description {
-                    font-size: 0.9rem;
                     color: #ccc;
                 }
             }
@@ -65,7 +77,11 @@
         flex-wrap: wrap;
         gap: 10px;
         justify-content: left;
-
+        order: 4;
+        @media screen and (max-width: 800px) {
+            width: 100%;
+            padding: 1.5rem 0rem;
+        }
         .grid-skill-container {
             padding: 5px;
             flex: 1 1 20%;

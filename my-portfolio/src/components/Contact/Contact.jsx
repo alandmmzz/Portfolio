@@ -10,7 +10,7 @@ export default function Contact() {
                 <Link to="/contacto" >
                     <div className="contenedor">
                         <div className="contacto-hero">
-                            <h2>Proyecto en mente?</h2>
+                            <h3>Proyecto en mente?</h3>
                             <h3>Trabajemos juntos :)</h3>
                         </div>
                         <div className="contacto-mail">
