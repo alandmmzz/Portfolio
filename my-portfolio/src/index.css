@@ -62,7 +62,7 @@ h4 {
   opacity: 0.8;
 }
 
-p, a, input, textarea {
+p, a, input, textarea, span {
   font-size: 1rem;
   color: var(--clr-light-a0);
   font-family: 'DM Sans', sans-serif;
@@ -82,27 +82,27 @@ p, a, input, textarea {
     font-size: 0.9rem;
   }
 
-  p, a, input, textarea   {
+  p, a, input, textarea, span {
     font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
-  h2 {
-    font-size: 1rem;
-  }
+    h2 {
+      font-size: 1rem;
+    }
 
-  h3 {
-    font-size: 0.9rem;
-  }
+    h3 {
+      font-size: 0.9rem;
+    }
 
-  h4 {
-    font-size: 0.8rem;
-  }
+    h4 {
+      font-size: 0.8rem;
+    }
 
-  p, a, input, textarea  {
-    font-size: 0.8rem;
-  }
+    p, a, input, textarea, span {
+      font-size: 0.8rem;
+    }
 }
 
 body {

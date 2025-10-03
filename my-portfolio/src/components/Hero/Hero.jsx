@@ -32,13 +32,16 @@ export default function Hero() {
                     <div className="hero-content-left">
                         <div className="hero-status">
                             <div className="hero-status-icon"></div>
-                            <div className="hero-status-text">Disponible para nuevos proyectos</div>
+                            <p className="hero-status-text">Disponible para nuevos proyectos</p>
                         </div>
                         <div className="hero-presentation">Hola, soy Aland,</div>
                         <div className="hero-main-title">
                             <div className="hero-uxui-image"></div>
                             <div className="hero-and-image">&</div>
                             <div className="hero-frontend-image">Frontend</div>
+                        </div>
+                        <div className="hero-image-container-mobile">
+                            <div className="hero-image"></div>
                         </div>
                         <div className="hero-main-description">
                             <p>Programador y diseñador web. Amante del diseño prolijo y de los códigos que funcionan.
