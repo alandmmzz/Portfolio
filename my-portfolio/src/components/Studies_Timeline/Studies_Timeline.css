@@ -60,7 +60,7 @@
                         }
                     }
 
-                    div.study-circle::after {
+                    div.study-circle:after {
                         content: '';
                         display: block;
                         width: 3px;
@@ -71,10 +71,10 @@
                         /* blanco-transparente */
                         height: 40px;
                         position: relative;
-                        justify-self: center;
+                        justify-self: center !important;
                         top: 47px;
                         @media screen and (max-width: 700px) {
-                            top: 27px;
+                            top: 27px !important;
                         }
                     }
 
@@ -103,7 +103,7 @@
                                 top: 30px;
                                 height: 20px;
                                 @media screen and (max-width: 700px) {
-                                    top: 12px;
+                                    top: 12px !important;
                                 }
                             }
                         }
