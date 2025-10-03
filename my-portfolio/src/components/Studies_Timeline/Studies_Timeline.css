@@ -71,10 +71,12 @@
                         /* blanco-transparente */
                         height: 40px;
                         position: relative;
-                        top: 47px;
-                        justify-content: center;
+                        @media screen and (min-width: 701px) {
+                            top: 47px;
+                            justify-content: center;
+                        }
                         @media screen and (max-width: 700px) {
-                            transform: translateY(-20px);
+                            transform: translateY(27px);
                             right: -11px;
                         }
                     }
@@ -101,10 +103,12 @@
                             }
 
                             div.study-circle::after {
-                                top: 30px;
                                 height: 20px;
+                                @media screen and (min-width: 701px) {
+                                    top: 30px;
+                                }
                                 @media screen and (max-width: 700px) {
-                                    transform: translateY(-18px);
+                                    transform: translateY(12px);
                                     right: -3px;
                                 }
                             }
