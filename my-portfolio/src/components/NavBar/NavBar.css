@@ -63,14 +63,15 @@ nav {
     .nav-indicator {
         position: absolute;
         bottom: 0;
-        height: 4px; /* grosor del subrayado */
-        width: 0;
+        left: 0;
+        height: 4px;
         background: #e2c20b;
-        filter: drop-shadow(0 0 5px #ffd23e6c);
         border-radius: 2px;
-        transition: all 0.3s ease;
-        margin-bottom: 5px;
+        transform-origin: left;
+        transition: transform 0.3s ease, width 0.3s ease;
+        will-change: transform, width;
     }
+
     .nav-link {
         position: relative;
         text-decoration: none;

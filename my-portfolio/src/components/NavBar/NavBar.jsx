@@ -16,7 +16,8 @@ export default function NavBar() {
       const navRect = navRef.current.getBoundingClientRect();
 
       indicator.style.width = `${rect.width}px`;
-      indicator.style.left = `${rect.left - navRect.left}px`;
+      indicator.style.transform = `translateX(${rect.left - navRect.left}px)`;
+
     }
   }, [location]); // 👈 ahora se ejecuta en cada cambio de ruta
 
