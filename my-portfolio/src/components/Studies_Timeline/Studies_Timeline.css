@@ -17,7 +17,10 @@
             display: flex;
             flex-direction: column;
             transition: 0.4s;
-
+            @media screen and (max-width: 700px) {
+                order: 2;
+                width: 100%;
+            }
             .studies-timeline {
                 display: flex;
                 flex-wrap: wrap;
@@ -33,15 +36,7 @@
                     cursor: pointer;
                     @media screen and (max-width: 700px) {
                         grid-template-columns: 30px auto;
-                    }
-                    @media screen and (max-width: 500px) {
-                        grid-template-columns: 10px auto;
-                        gap: 0 8px;
-                        h4 {
-                            position: relative;
-                            top: -3px;
-                            text-wrap: nowrap;
-                        }
+                        text-wrap: nowrap;
                     }
                     p {
                         position: relative;
@@ -49,9 +44,6 @@
                         opacity: 0.6;
                         @media screen and (max-width: 700px) {
                             top: -3px;
-                        }
-                        @media screen and (max-width: 500px) {
-                            top: -9px;
                             text-wrap: nowrap;
                         }
                     }
@@ -67,10 +59,6 @@
                         @media screen and (max-width: 700px) {
                             width: 30px;
                             height: 30px;
-                        }
-                        @media screen and (max-width: 500px) {
-                            width: 15px;
-                            height: 15px;
                         }
                     }
 
@@ -90,9 +78,6 @@
                         @media screen and (max-width: 700px) {
                             top: 27px;
                         }
-                        @media screen and (max-width: 500px) {
-                            top: 12px;
-                        }
                     }
 
                     ul.studies-details-list {
@@ -102,9 +87,6 @@
                             p {
                                 top: 0px;
                                 opacity: 0.9;
-                                @media screen and (max-width: 500px) {
-                                    top: -5px;
-                                }
                             }
 
                             div.study-circle {
@@ -117,10 +99,6 @@
                                     width: 15px;
                                     height: 15px;
                                 }
-                                @media screen and (max-width: 500px) {
-                                    width: 10px;
-                                    height: 10px;
-                                }
                             }
 
                             div.study-circle::after {
@@ -128,9 +106,6 @@
                                 height: 20px;
                                 @media screen and (max-width: 700px) {
                                     top: 12px;
-                                }
-                                @media screen and (max-width: 500px) {
-                                    top: 7px;
                                 }
                             }
                         }
@@ -181,7 +156,9 @@
             flex-direction: column;
             gap: 20px;
             height: min-content;
-            @media screen and (max-width: 600px) {
+            @media screen and (max-width: 700px) {
+                width: 100%;
+                margin-bottom: 20px;
                 padding: 0.5rem 0.8rem;
             }
             .container-data {
@@ -190,7 +167,7 @@
                     font-family: 'DM Sans', sans-serif;
                     opacity: 0.8;
                     margin-bottom: 10px;
-                    @media screen and (max-width: 600px) {
+                    @media screen and (max-width: 700px) {
                         text-align: center;
                     }
                 }
@@ -200,6 +177,9 @@
                     color: var(--clr-light-a0);
                     font-family: 'DM Sans', sans-serif;
                     opacity: 0.8;
+                    @media screen and (max-width: 700px) {
+                        text-align: center;
+                    }
                 }
                 .studies-links {
                     margin-top: 20px;
