@@ -71,10 +71,11 @@
                         /* blanco-transparente */
                         height: 40px;
                         position: relative;
-                        justify-self: center !important;
                         top: 47px;
+                        justify-content: center;
                         @media screen and (max-width: 700px) {
-                            top: 27px !important;
+                            transform: translateY(-20px);
+                            right: -11px;
                         }
                     }
 
@@ -103,7 +104,8 @@
                                 top: 30px;
                                 height: 20px;
                                 @media screen and (max-width: 700px) {
-                                    top: 12px !important;
+                                    transform: translateY(-18px);
+                                    right: -3px;
                                 }
                             }
                         }
