@@ -116,6 +116,7 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #222;
   line-height: 1.6;
+  filter: brightness(1.5);
 }
 
 body::-webkit-scrollbar {
