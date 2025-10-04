@@ -92,14 +92,14 @@
                 background: rgba(255, 255, 255, 0.1);
                 justify-self: center;
                 display: flex;
-                justify-content: center;
-                align-content: center;
                 flex-wrap: wrap;
-                justify-self: center;
+                align-items: center;
+                justify-content: center;
                 img {
                     width: 24px;
                     height: 24px;
                     object-fit: contain;
+                    display: block;
                 }
             }
 
