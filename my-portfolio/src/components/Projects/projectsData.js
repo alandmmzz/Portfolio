@@ -31,16 +31,6 @@ export const projects = [
             "/assets/img/proyectos/ProiPhone1.png",
             "/assets/img/proyectos/ProiPhone3.png",
         ],
-    },
-    {
-        titulo: "Proyecto en curso: Martinez Zavalía",
-        descripcion:
-            "Diseño y construcción de una plataforma web moderna para la gestión y publicación de propiedades. Actualmente cuenta con mockups en Figma y la planificación de una interfaz responsiva con React y React-Bootstrap.",
-        skills: [
-            { nombre: "Bootstrap", imagen: "/assets/img/skills/bootstrap.png" },
-            { nombre: "React", imagen: "/assets/img/skills/react.png" },
-            { nombre: "Figma", imagen: "/assets/img/skills/figma.png" },
-        ],
-        imagenes: [null, null, null],
-    },
+        link: "https://www.proiphone.com.uy",
+    }
 ];

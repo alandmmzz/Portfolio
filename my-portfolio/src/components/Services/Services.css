@@ -64,11 +64,14 @@
                 z-index: -1;       /* Coloca la imagen detrás del contenido */
                 opacity: 0.5;     /* Hace la imagen semi-transparente */
             }
-            &:hover {
-                box-shadow: 0 0 15px #ffd23e6c;
-                transform: scale(1.01);
-                transition: transform 0.4s, box-shadow 0.4s;
+            @media screen and (min-width: 800px) {
+                &:hover {
+                    box-shadow: 0 0 15px #ffd23e6c;
+                    transform: scale(1.01);
+                    transition: transform 0.4s, box-shadow 0.4s;
+                }
             }
+            
         }
         .contact-link {
             width: 100%;

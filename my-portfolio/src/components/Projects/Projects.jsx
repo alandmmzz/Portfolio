@@ -62,6 +62,11 @@ export default function Projects() {
                                             />
                                         </div>
                                     ))}
+                                    {proyecto.link && (
+                                        <div className="studies-links">
+                                            <a href={proyecto.link}>{proyecto.link}</a>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         ))}
