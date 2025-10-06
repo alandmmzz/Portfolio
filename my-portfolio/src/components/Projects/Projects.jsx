@@ -3,6 +3,7 @@ import "./Projects.css";
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
+import { FaGlobe } from "react-icons/fa";
 
 import { projects } from "./projectsData.js";
 
@@ -62,12 +63,12 @@ export default function Projects() {
                                             />
                                         </div>
                                     ))}
-                                    {proyecto.link && (
-                                        <div className="studies-links">
-                                            <a href={proyecto.link}>{proyecto.link}</a>
-                                        </div>
-                                    )}
                                 </div>
+                                {proyecto.link && (
+                                    <div className="proyecto-link">
+                                        <a href={proyecto.link}><FaGlobe size="18" />{proyecto.link}</a>
+                                    </div>
+                                )}
                             </div>
                         ))}
                     </div>
