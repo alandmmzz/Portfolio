@@ -1,9 +1,11 @@
-import React from 'react';
+import { React, useState } from 'react';
 import { Link } from "react-router-dom";
+import { IoIosArrowForward } from "react-icons/io";
 import './Hero.css';
 
 export default function Hero() {
 
+    const [clicked, setClicked] = useState(false);
     const links = [
         {
             title: "Mail",
@@ -36,9 +38,12 @@ export default function Hero() {
                         </div>
                         <div className="hero-presentation">Hola, soy Aland,</div>
                         <div className="hero-main-title">
-                            <div className="hero-uxui-image"></div>
-                            <div className="hero-and-image">&</div>
-                            <div className="hero-frontend-image">Frontend</div>
+                            <div
+                            className={`hero-uxui-image ${clicked ? "clicked" : ""}`}
+                            onClick={() => setClicked(true)}
+                            ></div>
+                            <div className={`hero-and-image ${clicked ? "clicked" : ""}`}>&</div>
+                            <div className={`hero-frontend-image ${clicked ? "clicked" : ""}`}>Frontend</div>
                         </div>
                         <div className="hero-image-container-mobile">
                             <div className="hero-image"></div>
@@ -61,14 +66,14 @@ export default function Hero() {
                         <div className="direct-buttons button-group">
                             <div className='group'>
                                 <p>Buscás un dev para tu empresa?</p>
-                                <Link to="/contacto" >
-                                    <button className='btn'>Contratame</button>
+                                <Link to="/contacto" className="btn-arrow">
+                                    Contratame <IoIosArrowForward size="24" />
                                 </Link>
                             </div>
                             <div className='group'>
                                 <p>Tenés un proyecto en mente?</p>
-                                <Link to="/freelancer" >
-                                    <button className='btn'>Trabajemos juntos</button>
+                                <Link to="/freelancer" className="btn-arrow">
+                                    Trabajemos juntos <IoIosArrowForward size="24" />
                                 </Link>
                             </div>
                         </div>

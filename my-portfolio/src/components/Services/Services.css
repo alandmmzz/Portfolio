@@ -77,6 +77,9 @@
             width: 100%;
             text-align: end;
             margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
             p {
                 color: #ccc;
                 margin-bottom: 20px;

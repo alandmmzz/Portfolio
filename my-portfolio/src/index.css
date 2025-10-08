@@ -228,3 +228,37 @@ section {
   }
 }
 
+.btn-arrow {
+    height: 45px;
+    position: relative;
+    color: #ccc;
+    padding: 8px 15px 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: .4s;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+    font-family: DM Sans;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: #ffffff1c;
+    display: flex;
+    text-wrap: nowrap;
+    width: min-content;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+.btn-arrow svg {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    top: 2px;
+    transition: 0.4s;
+    z-index: 1;
+}
+.btn-arrow:hover svg {
+    transform: translateX(6px);
+}

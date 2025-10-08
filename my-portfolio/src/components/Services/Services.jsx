@@ -1,7 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Services.css";
-import { FaReact, FaShopify, FaWordpress } from "react-icons/fa"; // íconos
+import { FaReact, FaShopify, FaWordpress } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function Services() {
   return (
@@ -40,10 +41,10 @@ export default function Services() {
                 <img src="/assets/img/services/wordpress-development.jpg" alt="Wordpress" />
             </div>
             <div className="contact-link">
-              <p>Buscas una cotización?</p>
-              <Link to="/contacto" className="btn">
-                Dejame un mensaje
-              </Link>
+                <p>Buscas una cotización?</p>
+                <Link to="/contacto" className="btn-arrow">
+                    Dejame un mensaje <IoIosArrowForward size="24" />
+                </Link>
             </div>
         </div>
       </section>
