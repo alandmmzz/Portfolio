@@ -217,7 +217,7 @@
                 width: 250px;
                 min-height: 200px;
                 position: absolute;
-                top: -90px;
+                transform: translateY(-90px);
                 @media screen and (max-width: 600px) {
                     min-height: 160px;
                     width: 200px;
