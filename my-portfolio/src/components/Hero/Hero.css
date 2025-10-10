@@ -3,10 +3,9 @@
     padding-top: 60px;
     display: flex;
 
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1000px) {
         height: auto;
     }
-
     .contenedor {
         display: flex;
         align-self: center;
@@ -80,6 +79,8 @@
 
                 @media screen and (max-width: 800px) {
                     bottom: -35px;
+                    position: relative;
+                    left: 10px;
                 }
             }
 
@@ -92,6 +93,8 @@
 
                 @media screen and (max-width: 800px) {
                     width: 50%;
+                    position: relative;
+                    left: 25px;
                 }
             }
 
@@ -211,12 +214,13 @@
 
             .hero-image {
                 justify-self: end;
-                width: 200px;
+                width: 250px;
                 min-height: 200px;
                 position: absolute;
                 top: -90px;
                 @media screen and (max-width: 600px) {
                     min-height: 160px;
+                    width: 200px;
                 }
             }
         }
@@ -306,6 +310,9 @@
                 width: auto;
                 height: max-content;
                 max-height: 50vh;
+                @media screen and (max-width: 1415px) {
+                    max-height: 55vh;
+                }
                 @media screen and (max-width: 1015px) {
                     max-height: 65vh;
                 }
@@ -345,6 +352,7 @@
                 P {
                     color: #ececec;
                     margin-bottom: 5px;
+                    text-wrap: wrap;
                 }
             }
         }
