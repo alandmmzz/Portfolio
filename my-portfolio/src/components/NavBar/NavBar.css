@@ -1,7 +1,7 @@
 header {
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 10;
     padding: 0 0 10px;
     color: #ffffffb7;
     .contenedor-navbar {

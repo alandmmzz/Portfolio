@@ -225,7 +225,7 @@
             font-family: 'DM Sans';
             text-align: right;
             color: #ccc;
-            @media screen and (min-width: 800px) {
+            @media screen and (max-width: 800px) {
                 backdrop-filter: blur(30px);
                 -webkit-backdrop-filter: blur(20px);
                 /* pa’ que funcione en Safari */
