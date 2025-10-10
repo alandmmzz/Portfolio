@@ -5,6 +5,7 @@
 
     @media screen and (max-width: 1000px) {
         height: auto;
+        overflow: hidden;
     }
     .contenedor {
         display: flex;
@@ -276,14 +277,15 @@
                     border-radius: 5px;
                     transition: 0.4s;
                 }
+                @media screen and (min-width: 800px) {
+                    &:hover {
+                        span::after {
+                            transform: scaleX(1);
+                        }
 
-                &:hover {
-                    span::after {
-                        transform: scaleX(1);
-                    }
-
-                    img {
-                        filter: drop-shadow(0 0 5px #ffd23e6c);
+                        img {
+                            filter: drop-shadow(0 0 5px #ffd23e6c);
+                        }
                     }
                 }
             }
