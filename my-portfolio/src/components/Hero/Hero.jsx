@@ -46,7 +46,7 @@ export default function Hero() {
                             <div className={`hero-frontend-image ${clicked ? "clicked" : ""}`}>Frontend</div>
                         </div>
                         <div className="hero-image-container-mobile">
-                            <div className="hero-image"></div>
+                            <img className="hero-image" src='/assets/img/hero/Portfolio-main.webp'></img>
                         </div>
                         <div className="hero-main-description">
                             <p>Programador y diseñador web. Amante del diseño prolijo y de los códigos que funcionan.
@@ -61,7 +61,7 @@ export default function Hero() {
                     </div>
                     <div className="hero-content-right">
                         <div className="hero-image-container">
-                            <div className="hero-image"></div>
+                            <img className="hero-image" src='/assets/img/hero/Portfolio-main.webp'></img>
                         </div>
                         <div className="direct-buttons button-group">
                             <div className='group'>

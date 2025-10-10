@@ -18,6 +18,7 @@
 
         @media screen and (max-width: 600px) {
             padding: 0;
+            margin: 0;
         }
 
         .hero-content-left {
@@ -32,7 +33,6 @@
             }
 
             .hero-status {
-                width: 100%;
                 display: flex;
                 align-items: center;
                 backdrop-filter: blur(20px);
@@ -45,7 +45,10 @@
                 color: #ccc;
                 position: relative;
                 bottom: -30px;
-
+                z-index: 5;
+                @media screen and (min-width: 800px) {
+                    width: 100%;
+                }
                 P {
                     position: relative;
                     bottom: -1px;
@@ -208,40 +211,29 @@
 
             .hero-image {
                 justify-self: end;
-                border: 10px solid transparent;
                 width: 200px;
                 min-height: 200px;
-                background: url("/assets/img/ProfilePic.jpeg") no-repeat;
-                background-size: 200px;
-                background-position: center;
-
-                /* Aplica la máscara */
-                -webkit-mask-image: url("/assets/img/hero/blob-1.svg");
-                -webkit-mask-repeat: no-repeat;
-                -webkit-mask-position: center;
-                -webkit-mask-size: contain;
-
-                mask-image: url("/assets/img/hero/blob-1.svg");
-                mask-repeat: no-repeat;
-                mask-position: center;
-                mask-size: 200px;
-
+                position: absolute;
+                top: -90px;
                 @media screen and (max-width: 600px) {
-                    width: 160px;
                     min-height: 160px;
-                    background-size: 160px;
-                    -webkit-mask-size: 160px;
-                    mask-size: 160px;
                 }
             }
         }
 
         .hero-main-description {
-            font-size: 20px;
             font-family: 'DM Sans';
             text-align: right;
             color: #ccc;
-
+            @media screen and (min-width: 800px) {
+                backdrop-filter: blur(30px);
+                -webkit-backdrop-filter: blur(20px);
+                /* pa’ que funcione en Safari */
+                background: rgba(41, 41, 41, 0.274);
+                padding: 20px;
+                border: 1px solid #cccccc2d;
+                border-radius: 20px;
+            }
             .link-container {
                 display: flex;
                 align-items: center;
@@ -297,7 +289,7 @@
             width: 50%;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: end;
             align-items: center;
 
             @media screen and (max-width: 800px) {
@@ -305,28 +297,18 @@
             }
 
             .hero-image-container {
-                filter: drop-shadow(0 0 30px #ffd23e6c);
+                position: absolute;
+                top: 15vh;
+                filter: drop-shadow(0 0 10px #ffd23e44);
             }
 
             .hero-image {
-                border: 10px solid transparent;
-                width: 300px;
-                height: 300px;
-                background: url("/assets/img/ProfilePic.jpeg") no-repeat;
-                background-size: cover;
-                background-position: center;
-
-                /* Aplica la máscara */
-                -webkit-mask-image: url("/assets/img/hero/blob-1.svg");
-                -webkit-mask-repeat: no-repeat;
-                -webkit-mask-position: center;
-                -webkit-mask-size: contain;
-
-                mask-image: url("/assets/img/hero/blob-1.svg");
-                mask-repeat: no-repeat;
-                mask-position: center;
-                mask-size: 100%;
-
+                width: auto;
+                height: max-content;
+                max-height: 50vh;
+                @media screen and (max-width: 1015px) {
+                    max-height: 65vh;
+                }
                 @media screen and (max-width: 800px) {
                     display: none;
                 }
@@ -334,21 +316,34 @@
 
             .button-group {
                 display: flex;
-                flex-direction: column;
+                justify-content: center;
                 gap: 20px;
                 margin-top: 20px;
-
                 @media screen and (max-width: 800px) {
-                    width: 100%;
                     margin-top: 0px;
                     flex-direction: row;
                     text-align: center;
                     justify-content: space-around;
                     gap: 10px 20px;
                 }
-
+                @media screen and (min-width: 800px) {
+                    backdrop-filter: blur(30px);
+                    -webkit-backdrop-filter: blur(20px);
+                    /* pa’ que funcione en Safari */
+                    background: rgba(41, 41, 41, 0.274);
+                    padding: 20px;
+                    border: 1px solid #cccccc2d;
+                    border-radius: 20px;
+                    width: calc(100% - 40px);
+                    flex-direction: column;
+                }
+                .group {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
                 P {
-                    color: #ccc;
+                    color: #ececec;
                     margin-bottom: 5px;
                 }
             }
