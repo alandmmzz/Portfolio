@@ -7,24 +7,25 @@ export type Role = {
 
 export const experience: Role[] = [
   {
-    title: "Frontend Developer",
+    title: "Frontend Developer / UX-UI",
     company: "Asignet",
-    period: "2025 — presente",
+    period: "2024 — presente",
     bullets: [
-      "Desarrollo y mantenimiento de aplicaciones web con React y JavaScript.",
-      "Construcción de componentes UI reutilizables y accesibles.",
-      "Implementación de diseños responsive con Tailwind CSS.",
-      "Integración con APIs REST y manejo de estado de la aplicación.",
+      "Desarrollo y mantenimiento de aplicaciones web con HTML, CSS y JavaScript.",
+      "Construcción de componentes UI reutilizables y accesibles, validando estándares de accesibilidad.",
+      "Implementación de diseños responsive con CSS y jQuery, en conjunto con equipos de Backend y Producto.",
+      "Comunicación en inglés con equipos internacionales.",
+      "Creación de íconos y gráficos en Adobe Illustrator para mantener consistencia visual.",
     ],
   },
   {
-    title: "RPA Developer",
+    title: "RPA Developer Semi-Senior",
     company: "Asignet",
-    period: "2023 — 2025",
+    period: "2022 — presente",
     bullets: [
-      "Desarrollo de soluciones de automatización para optimizar procesos.",
-      "Integración de sistemas internos y APIs.",
-      "Análisis de requerimientos y propuesta de soluciones eficientes.",
+      "Desarrollo de soluciones de automatización para optimizar procesos de negocio.",
+      "Mantenimiento y optimización de workflows automatizados.",
+      "Documentación de scripts y soluciones técnicas para asegurar mantenibilidad y transferencia de conocimiento.",
     ],
   },
 ];
