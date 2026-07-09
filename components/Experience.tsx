@@ -37,16 +37,34 @@ export default function Experience() {
           ))}
         </div>
 
-        <div className="mt-14 flex items-baseline justify-between gap-8 border-t border-line pt-8">
-          <div>
-            <h3 className="font-display text-base font-semibold text-fg">
-              {profile.education.degree}
-            </h3>
-            <p className="mt-1 text-sm text-muted">{profile.education.school}</p>
-          </div>
-          <p className="shrink-0 font-mono text-xs text-muted">
-            {profile.education.period}
-          </p>
+        <div className="mt-14 space-y-4 border-t border-line pt-8">
+          <h3 className="font-mono text-xs uppercase tracking-wider text-muted">
+            Educación
+          </h3>
+          {profile.education.map((edu) => (
+            <div
+              key={edu.degree}
+              className="flex items-baseline justify-between gap-8"
+            >
+              <div>
+                <p className="font-display text-base font-semibold text-fg">
+                  {edu.degree}
+                </p>
+                <p className="mt-0.5 text-sm text-muted">{edu.school}</p>
+              </div>
+              <p className="shrink-0 font-mono text-xs text-muted">
+                {edu.period}
+              </p>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap gap-x-8 gap-y-2 border-t border-line pt-6 font-mono text-xs text-muted">
+          {profile.languages.map((lang) => (
+            <span key={lang.name}>
+              {lang.name} <span className="text-line">·</span> {lang.level}
+            </span>
+          ))}
         </div>
       </div>
     </section>
