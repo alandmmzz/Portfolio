@@ -1,15 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations, getLocale } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, GithubLogo, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/content/projects";
 
-const statusLabel: Record<Project["status"], string> = {
-  live: "live",
-  "en curso": "en curso",
-  archivado: "archivado",
-};
+export default async function ProjectCard({ project }: { project: Project }) {
+  const locale = await getLocale();
+  const t = await getTranslations("ProjectCard");
+  const status = await getTranslations("ProjectStatus");
 
-export default function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group overflow-hidden rounded-lg border border-line bg-bg-elevated transition-colors hover:border-accent-dim">
       <Link href={`/proyectos/${project.slug}`} className="block">
@@ -17,13 +16,13 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.cover ? (
             <Image
               src={project.cover}
-              alt={`Captura de ${project.title}`}
+              alt={`${locale === "es" ? "Captura de" : "Screenshot of"} ${project.title}`}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
               sizes="(min-width: 768px) 50vw, 100vw"
             />
           ) : (
-            <span className="font-mono text-xs text-muted">sin capturas todavía</span>
+            <span className="font-mono text-xs text-muted">{t("sinCapturas")}</span>
           )}
         </div>
         <div className="p-5 pb-4">
@@ -37,7 +36,7 @@ export default function ProjectCard({ project }: { project: Project }) {
                   project.status === "live" ? "bg-accent" : "bg-muted"
                 }`}
               />
-              {statusLabel[project.status]}
+              {status(project.status)}
             </span>
           </div>
           <p className="mt-2 text-sm leading-relaxed text-muted">
@@ -61,7 +60,7 @@ export default function ProjectCard({ project }: { project: Project }) {
           href={`/proyectos/${project.slug}`}
           className="flex items-center gap-1 font-mono text-xs text-muted transition-colors hover:text-fg"
         >
-          Ver más
+          {t("verMas")}
           <ArrowRight size={13} weight="bold" />
         </Link>
         {project.link && (
@@ -72,7 +71,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="ml-auto flex items-center gap-1 font-mono text-xs text-muted transition-colors hover:text-accent"
           >
             <ArrowUpRight size={14} weight="bold" />
-            Sitio
+            {t("sitio")}
           </a>
         )}
         {project.repo && (
@@ -83,7 +82,7 @@ export default function ProjectCard({ project }: { project: Project }) {
             className="flex items-center gap-1 font-mono text-xs text-muted transition-colors hover:text-fg"
           >
             <GithubLogo size={14} weight="bold" />
-            Código
+            {t("codigo")}
           </a>
         )}
       </div>

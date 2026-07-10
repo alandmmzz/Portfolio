@@ -1,0 +1,52 @@
+{
+  "Nav": {
+    "experiencia": "Experiencia",
+    "proyectos": "Proyectos",
+    "stack": "Stack",
+    "contacto": "Contacto"
+  },
+  "Hero": {
+    "verProyectos": "Ver proyectos"
+  },
+  "StatusBar": {
+    "disponible": "disponible para proyectos"
+  },
+  "Home": {
+    "proyectosTitulo": "Proyectos",
+    "proyectosTotal": "{count} total",
+    "stackTitulo": "Stack"
+  },
+  "Experience": {
+    "titulo": "Experiencia",
+    "educacion": "Educación"
+  },
+  "ProjectStatus": {
+    "live": "live",
+    "en curso": "en curso",
+    "archivado": "archivado"
+  },
+  "ProjectCard": {
+    "sinCapturas": "sin capturas todavía",
+    "verMas": "Ver más",
+    "sitio": "Sitio",
+    "codigo": "Código"
+  },
+  "FeaturedProject": {
+    "destacado": "Proyecto destacado",
+    "verMas": "Ver más",
+    "sitio": "Sitio",
+    "codigo": "Código"
+  },
+  "Footer": {
+    "titulo": "¿Hablamos de tu proyecto?",
+    "subtitulo": "Escribime y te respondo en el día.",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "ProjectPage": {
+    "volver": "Proyectos",
+    "verSitio": "Ver sitio",
+    "codigo": "Código",
+    "captura": "captura"
+  }
+}

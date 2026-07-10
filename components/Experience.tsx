@@ -1,15 +1,21 @@
+import { getTranslations, getLocale } from "next-intl/server";
 import { experience } from "@/content/experience";
 import { profile } from "@/content/profile";
 
-export default function Experience() {
+export default async function Experience() {
+  const locale = (await getLocale()) as "es" | "en";
+  const t = await getTranslations("Experience");
+  const roles = experience[locale];
+  const p = profile[locale];
+
   return (
     <section id="experiencia" className="border-t border-line">
       <div className="mx-auto max-w-5xl px-6 py-24">
         <h2 className="font-display text-2xl font-semibold text-fg sm:text-3xl">
-          Experiencia
+          {t("titulo")}
         </h2>
         <div className="mt-10 space-y-10">
-          {experience.map((role) => (
+          {roles.map((role) => (
             <div
               key={`${role.company}-${role.title}`}
               className="grid gap-2 border-b border-line pb-10 last:border-b-0 last:pb-0 sm:grid-cols-[200px_1fr] sm:gap-8"
@@ -39,9 +45,9 @@ export default function Experience() {
 
         <div className="mt-14 space-y-4 border-t border-line pt-8">
           <h3 className="font-mono text-xs uppercase tracking-wider text-muted">
-            Educación
+            {t("educacion")}
           </h3>
-          {profile.education.map((edu) => (
+          {p.education.map((edu) => (
             <div
               key={edu.degree}
               className="flex items-baseline justify-between gap-8"
@@ -60,7 +66,7 @@ export default function Experience() {
         </div>
 
         <div className="mt-10 flex flex-wrap gap-x-8 gap-y-2 border-t border-line pt-6 font-mono text-xs text-muted">
-          {profile.languages.map((lang) => (
+          {p.languages.map((lang) => (
             <span key={lang.name}>
               {lang.name} <span className="text-line">·</span> {lang.level}
             </span>

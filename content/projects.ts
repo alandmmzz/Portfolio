@@ -1,3 +1,5 @@
+import type { Locale } from "@/i18n/routing";
+
 export type Project = {
   slug: string;
   title: string;
@@ -15,7 +17,7 @@ export type Project = {
   featured?: boolean;
 };
 
-export const projects: Project[] = [
+const es: Project[] = [
   {
     slug: "coffee-lovers",
     title: "Coffee Lovers",
@@ -68,3 +70,59 @@ export const projects: Project[] = [
     status: "en curso",
   },
 ];
+
+const en: Project[] = [
+  {
+    slug: "coffee-lovers",
+    title: "Coffee Lovers",
+    year: "2026",
+    role: "Personal project · full-stack",
+    summary:
+      "Coffee-tasting app with profiles, private groups, a social feed, and push notifications.",
+    description:
+      "A coffee-tasting log: record every coffee you try (brand, roast, brewing method) and rate it across sensory attributes — aroma, acidity, sweetness, body, bitterness, aftertaste, and balance. Sign in with GitHub or Google, a shared coffee catalog, private groups to share your history with whoever you choose, a chronological feed with reactions and comments, push notifications, an installable PWA, and a French press calculator that adjusts ratios based on strength and number of cups.",
+    highlights: [
+      "GitHub/Google auth (NextAuth) with profiles and personal stats",
+      "Groups act as privacy circles, not review containers",
+      "Social feed with reactions, comments, and push notifications (even with the app closed)",
+      "Installable PWA with install and notification banners on mobile only",
+      "Standalone coffee calculator with a press inventory and automatic dosing",
+      "Admin panels for the coffee catalog, brand logos, and users",
+    ],
+    stack: ["Next.js", "PostgreSQL", "NextAuth", "Web Push", "PWA"],
+    link: "https://real-coffee-lovers.vercel.app/",
+    repo: "https://github.com/alandmmzz/coffee-lovers",
+    cover: "/projects/coffee-lovers/1.png",
+    images: [
+      "/projects/coffee-lovers/1.png",
+      "/projects/coffee-lovers/2.png",
+      "/projects/coffee-lovers/3.png",
+    ],
+    status: "en curso",
+    featured: true,
+  },
+  {
+    slug: "game-crm",
+    title: "Game CRM",
+    year: "2026",
+    role: "Personal project · full-stack",
+    summary:
+      "Social app to track what your friends are playing: hours, progress, and profile compatibility.",
+    description:
+      "An app to track your friends' games: what they're playing, how many hours they've put in, and what patterns show up across different profiles. It auto-imports from Steam (games, hours, achievements) and can link with World of Warcraft (character, ilvl, raid progress). A player role is generated with AI based on most-played genres, with a genre radar chart and friend-compatibility insights — including a Tinder-style 'GameFinder' with personalized recommendations.",
+    highlights: [
+      "Automatic import from Steam (games, hours, achievements) and World of Warcraft linking",
+      "Player role and insights generated with the Claude API based on played genres",
+      "Tinder-style GameFinder with personalized recommendations between friends",
+      "Public profiles with GitHub/Google auth, mobile-first with an iOS-style bottom bar",
+    ],
+    stack: ["Next.js", "Supabase", "Tailwind CSS", "Claude API", "Steam API"],
+    link: "https://gamecrm.vercel.app/",
+    repo: "https://github.com/alandmmzz/gamecrm",
+    cover: "/projects/game-crm/1.png",
+    images: ["/projects/game-crm/1.png", "/projects/game-crm/2.png"],
+    status: "en curso",
+  },
+];
+
+export const projects: Record<Locale, Project[]> = { es, en };

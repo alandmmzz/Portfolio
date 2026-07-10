@@ -1,3 +1,5 @@
+import type { Locale } from "@/i18n/routing";
+
 export type Role = {
   title: string;
   company: string;
@@ -5,7 +7,7 @@ export type Role = {
   bullets: string[];
 };
 
-export const experience: Role[] = [
+const es: Role[] = [
   {
     title: "Frontend Developer / UX-UI",
     company: "Asignet",
@@ -29,3 +31,30 @@ export const experience: Role[] = [
     ],
   },
 ];
+
+const en: Role[] = [
+  {
+    title: "Frontend Developer / UX-UI",
+    company: "Asignet",
+    period: "2024 — present",
+    bullets: [
+      "Developed and maintained web applications with HTML, CSS, and JavaScript.",
+      "Built reusable, accessible UI components, validating accessibility standards.",
+      "Implemented responsive designs with CSS and jQuery, working alongside Backend and Product teams.",
+      "Communicated in English with international teams.",
+      "Created icons and graphics in Adobe Illustrator to keep visual consistency.",
+    ],
+  },
+  {
+    title: "RPA Developer Semi-Senior",
+    company: "Asignet",
+    period: "2022 — present",
+    bullets: [
+      "Developed automation solutions to optimize business processes.",
+      "Maintained and optimized automated workflows.",
+      "Documented scripts and technical solutions to ensure maintainability and knowledge transfer.",
+    ],
+  },
+];
+
+export const experience: Record<Locale, Role[]> = { es, en };
