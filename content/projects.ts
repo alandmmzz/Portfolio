@@ -128,10 +128,11 @@ const es: Project[] = [
     description:
       "Sitio web para Corte Fino, pensado para presentar la marca, comunicar sus servicios y convertir visitas en reservas desde una experiencia clara y mobile-first.",
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    link: "https://corte-fino-flame.vercel.app/",
+    link: "https://corte-fino-barber.vercel.app/",
     repo: "https://github.com/alandmmzz/CorteFino",
     category: "client",
-    images: [],
+    cover: "/projects/corte-fino/1.png",
+    images: ["/projects/corte-fino/1.png"],
     status: "live",
   },
 ];
@@ -246,10 +247,11 @@ const en: Project[] = [
     description:
       "Website for Corte Fino, designed to present the brand, communicate its services, and turn visits into bookings through a clear, mobile-first experience.",
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-    link: "https://corte-fino-flame.vercel.app/",
+    link: "https://corte-fino-barber.vercel.app/",
     repo: "https://github.com/alandmmzz/CorteFino",
     category: "client",
-    images: [],
+    cover: "/projects/corte-fino/1.png",
+    images: ["/projects/corte-fino/1.png"],
     status: "live",
   },
 ];
