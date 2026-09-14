@@ -36,6 +36,8 @@
   },
   "FeaturedProject": {
     "destacado": "Featured project",
+    "personal": "Personal project",
+    "cliente": "Client case study",
     "verMas": "See more",
     "sitio": "Site",
     "codigo": "Code"
@@ -48,6 +50,8 @@
   },
   "ProjectPage": {
     "volver": "Projects",
+    "personal": "Personal project",
+    "cliente": "Client case study",
     "verSitio": "View site",
     "codigo": "Code",
     "captura": "screenshot"

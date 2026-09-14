@@ -36,9 +36,12 @@ export default function FeaturedProject({
         </div>
       </Link>
       <div className="flex flex-col justify-center p-6 sm:p-8">
-        <span className="font-mono text-[11px] uppercase tracking-wider text-accent">
-          {t("destacado")}
-        </span>
+        <div className="flex flex-wrap items-center gap-3 font-mono text-[11px] uppercase tracking-wider">
+          <span className="text-accent">
+            {project.category === "client" ? t("cliente") : t("personal")}
+          </span>
+          {project.featured && <span className="text-muted">{t("destacado")}</span>}
+        </div>
         <Link href={`/proyectos/${project.slug}`}>
           <h3 className="mt-3 font-display text-2xl font-semibold text-fg sm:text-3xl">
             {project.title}

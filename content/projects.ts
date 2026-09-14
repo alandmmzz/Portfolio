@@ -122,7 +122,7 @@ const es: Project[] = [
     slug: "corte-fino",
     title: "Corte Fino",
     year: "2026",
-    role: "Proyecto personal · web app",
+    role: "Proyecto para cliente · web app",
     summary:
       "Experiencia web para un estudio de barbería y cuidado masculino, con foco en marca y conversión.",
     description:
