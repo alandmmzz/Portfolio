@@ -14,6 +14,7 @@ export type Project = {
   cover?: string;
   images: string[];
   status: "live" | "en curso" | "archivado";
+  category: "personal" | "client";
   featured?: boolean;
 };
 
@@ -38,6 +39,7 @@ const es: Project[] = [
     stack: ["Next.js", "PostgreSQL", "NextAuth", "Web Push", "PWA"],
     link: "https://real-coffee-lovers.vercel.app/",
     repo: "https://github.com/alandmmzz/coffee-lovers",
+    category: "personal",
     cover: "/projects/coffee-lovers/1.png",
     images: [
       "/projects/coffee-lovers/1.png",
@@ -65,6 +67,7 @@ const es: Project[] = [
     stack: ["Next.js", "Supabase", "Tailwind CSS", "Claude API", "Steam API"],
     link: "https://gamecrm.vercel.app/",
     repo: "https://github.com/alandmmzz/gamecrm",
+    category: "personal",
     cover: "/projects/game-crm/1.png",
     images: ["/projects/game-crm/1.png", "/projects/game-crm/2.png"],
     status: "en curso",
@@ -87,6 +90,7 @@ const es: Project[] = [
     stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Better Auth", "Resend"],
     link: "https://www.luma.com.uy/",
     repo: "https://github.com/alandmmzz/LumaCentroEstetico",
+    category: "client",
     cover: "/projects/luma/1.png",
     images: ["/projects/luma/1.png"],
     status: "live",
@@ -109,6 +113,7 @@ const es: Project[] = [
     stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Mercado Pago", "Vercel Blob"],
     link: "https://www.pequenido.com.uy/",
     repo: "https://github.com/alandmmzz/PequeNido",
+    category: "client",
     cover: "/projects/pequenido/1.png",
     images: ["/projects/pequenido/1.png"],
     status: "live",
@@ -125,6 +130,7 @@ const es: Project[] = [
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     link: "https://corte-fino-flame.vercel.app/",
     repo: "https://github.com/alandmmzz/CorteFino",
+    category: "client",
     images: [],
     status: "live",
   },
@@ -151,6 +157,7 @@ const en: Project[] = [
     stack: ["Next.js", "PostgreSQL", "NextAuth", "Web Push", "PWA"],
     link: "https://real-coffee-lovers.vercel.app/",
     repo: "https://github.com/alandmmzz/coffee-lovers",
+    category: "personal",
     cover: "/projects/coffee-lovers/1.png",
     images: [
       "/projects/coffee-lovers/1.png",
@@ -178,6 +185,7 @@ const en: Project[] = [
     stack: ["Next.js", "Supabase", "Tailwind CSS", "Claude API", "Steam API"],
     link: "https://gamecrm.vercel.app/",
     repo: "https://github.com/alandmmzz/gamecrm",
+    category: "personal",
     cover: "/projects/game-crm/1.png",
     images: ["/projects/game-crm/1.png", "/projects/game-crm/2.png"],
     status: "en curso",
@@ -200,6 +208,7 @@ const en: Project[] = [
     stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Better Auth", "Resend"],
     link: "https://www.luma.com.uy/",
     repo: "https://github.com/alandmmzz/LumaCentroEstetico",
+    category: "client",
     cover: "/projects/luma/1.png",
     images: ["/projects/luma/1.png"],
     status: "live",
@@ -222,6 +231,7 @@ const en: Project[] = [
     stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Mercado Pago", "Vercel Blob"],
     link: "https://www.pequenido.com.uy/",
     repo: "https://github.com/alandmmzz/PequeNido",
+    category: "client",
     cover: "/projects/pequenido/1.png",
     images: ["/projects/pequenido/1.png"],
     status: "live",
@@ -238,6 +248,7 @@ const en: Project[] = [
     stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
     link: "https://corte-fino-flame.vercel.app/",
     repo: "https://github.com/alandmmzz/CorteFino",
+    category: "client",
     images: [],
     status: "live",
   },

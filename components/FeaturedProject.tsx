@@ -1,18 +1,20 @@
+"use client";
+
 import Image from "next/image";
-import { getTranslations, getLocale } from "next-intl/server";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, GithubLogo, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/content/projects";
 
-export default async function FeaturedProject({
+export default function FeaturedProject({
   project,
   reverse = false,
 }: {
   project: Project;
   reverse?: boolean;
 }) {
-  const locale = await getLocale();
-  const t = await getTranslations("FeaturedProject");
+  const locale = useLocale();
+  const t = useTranslations("FeaturedProject");
 
   return (
     <div className="group grid overflow-hidden rounded-lg border border-line bg-bg-elevated transition-colors hover:border-accent-dim md:grid-cols-2">
