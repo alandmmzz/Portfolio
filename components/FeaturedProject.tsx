@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, GithubLogo, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/content/projects";
+import MonitorMockup from "@/components/MonitorMockup";
 
 export default function FeaturedProject({
   project,
@@ -24,26 +24,12 @@ export default function FeaturedProject({
       >
         <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-line bg-bg px-6 py-8 md:aspect-auto md:h-full md:border-b-0 md:border-r">
           {project.cover && (
-            <div className="relative w-full max-w-[560px] transition-transform duration-500 group-hover:-translate-y-1">
-              <div className="overflow-hidden rounded-[0.35rem] border border-line bg-bg-elevated p-1 shadow-2xl shadow-bg/60">
-                <div className="flex h-5 items-center gap-1.5 border-b border-line px-2">
-                  <span className="h-1.5 w-1.5 rounded-full bg-muted/70" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-muted/50" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-muted/30" />
-                </div>
-                <div className="relative aspect-[16/10] overflow-hidden rounded-[0.15rem] bg-bg">
-                  <Image
-                    src={project.cover}
-                    alt={`${locale === "es" ? "Captura de" : "Screenshot of"} ${project.title}`}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                    priority
-                  />
-                </div>
-              </div>
-              <div className="mx-auto h-2.5 w-1/4 rounded-b bg-line" />
-              <div className="mx-auto h-1 w-2/5 rounded-b bg-line/80" />
+            <div className="w-full max-w-[520px] transition-transform duration-500 group-hover:-translate-y-1">
+              <MonitorMockup
+                src={project.cover}
+                alt={`${locale === "es" ? "Captura de" : "Screenshot of"} ${project.title}`}
+                priority
+              />
             </div>
           )}
         </div>

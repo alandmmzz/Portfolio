@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, GithubLogo, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/content/projects";
+import MonitorMockup from "@/components/MonitorMockup";
 
 export default async function ProjectCard({ project }: { project: Project }) {
   const locale = await getLocale();
@@ -13,30 +13,13 @@ export default async function ProjectCard({ project }: { project: Project }) {
     <div className="group overflow-hidden rounded-lg border border-line bg-bg-elevated transition-colors hover:border-accent-dim">
       <Link href={`/proyectos/${project.slug}`} className="block">
         <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-line bg-bg px-5 py-6 sm:px-8">
-          {project.cover ? (
-            <div className="relative w-full max-w-[520px] transition-transform duration-500 group-hover:-translate-y-1">
-              <div className="overflow-hidden rounded-[0.35rem] border border-line bg-bg-elevated p-1 shadow-2xl shadow-bg/60">
-                <div className="flex h-4 items-center gap-1 border-b border-line px-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-muted/70" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-muted/50" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-muted/30" />
-                </div>
-                <div className="relative aspect-[16/10] overflow-hidden rounded-[0.15rem] bg-bg">
-                  <Image
-                    src={project.cover}
-                    alt={`${locale === "es" ? "Captura de" : "Screenshot of"} ${project.title}`}
-                    fill
-                    className="object-cover"
-                    sizes="(min-width: 768px) 50vw, 100vw"
-                  />
-                </div>
-              </div>
-              <div className="mx-auto h-2 w-1/4 rounded-b bg-line" />
-              <div className="mx-auto h-1 w-2/5 rounded-b bg-line/80" />
-            </div>
-          ) : (
-            <span className="font-mono text-xs text-muted">{t("sinCapturas")}</span>
-          )}
+          <div className="w-full max-w-[480px] transition-transform duration-500 group-hover:-translate-y-1">
+            <MonitorMockup
+              src={project.cover}
+              alt={`${locale === "es" ? "Captura de" : "Screenshot of"} ${project.title}`}
+              emptyLabel={t("sinCapturas")}
+            />
+          </div>
         </div>
         <div className="p-5 pb-4">
           <div className="flex items-center justify-between gap-3">
