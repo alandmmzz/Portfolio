@@ -17,7 +17,9 @@
     "filtroTodos": "All",
     "filtroPersonal": "Personal projects",
     "filtroCliente": "Client projects",
-    "stackTitulo": "Stack"
+    "stackTitulo": "Stack",
+    "clientesEyebrow": "Clients",
+    "clientesTitulo": "Companies I have worked with"
   },
   "Experience": {
     "titulo": "Experience",
