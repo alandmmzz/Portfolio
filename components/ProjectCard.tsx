@@ -1,8 +1,8 @@
-import Image from "next/image";
 import { getTranslations, getLocale } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { ArrowUpRight, GithubLogo, ArrowRight } from "@phosphor-icons/react/dist/ssr";
 import type { Project } from "@/content/projects";
+import MonitorMockup from "@/components/MonitorMockup";
 
 export default async function ProjectCard({ project }: { project: Project }) {
   const locale = await getLocale();
@@ -12,18 +12,14 @@ export default async function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="group overflow-hidden rounded-lg border border-line bg-bg-elevated transition-colors hover:border-accent-dim">
       <Link href={`/proyectos/${project.slug}`} className="block">
-        <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-line bg-bg">
-          {project.cover ? (
-            <Image
+        <div className="relative flex aspect-[16/10] items-center justify-center overflow-hidden border-b border-line bg-bg px-5 py-6 sm:px-8">
+          <div className="w-full max-w-[480px] transition-transform duration-500 group-hover:-translate-y-1">
+            <MonitorMockup
               src={project.cover}
               alt={`${locale === "es" ? "Captura de" : "Screenshot of"} ${project.title}`}
-              fill
-              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-              sizes="(min-width: 768px) 50vw, 100vw"
+              emptyLabel={t("sinCapturas")}
             />
-          ) : (
-            <span className="font-mono text-xs text-muted">{t("sinCapturas")}</span>
-          )}
+          </div>
         </div>
         <div className="p-5 pb-4">
           <div className="flex items-center justify-between gap-3">

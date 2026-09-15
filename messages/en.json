@@ -14,6 +14,9 @@
   "Home": {
     "proyectosTitulo": "Projects",
     "proyectosTotal": "{count} total",
+    "filtroTodos": "All",
+    "filtroPersonal": "Personal projects",
+    "filtroCliente": "Client projects",
     "stackTitulo": "Stack"
   },
   "Experience": {
@@ -33,6 +36,8 @@
   },
   "FeaturedProject": {
     "destacado": "Featured project",
+    "personal": "Personal project",
+    "cliente": "Client case study",
     "verMas": "See more",
     "sitio": "Site",
     "codigo": "Code"
@@ -45,6 +50,8 @@
   },
   "ProjectPage": {
     "volver": "Projects",
+    "personal": "Personal project",
+    "cliente": "Client case study",
     "verSitio": "View site",
     "codigo": "Code",
     "captura": "screenshot"

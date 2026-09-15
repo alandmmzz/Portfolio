@@ -14,6 +14,9 @@
   "Home": {
     "proyectosTitulo": "Proyectos",
     "proyectosTotal": "{count} total",
+    "filtroTodos": "Todos",
+    "filtroPersonal": "Proyectos propios",
+    "filtroCliente": "Proyectos para clientes",
     "stackTitulo": "Stack"
   },
   "Experience": {
@@ -33,6 +36,8 @@
   },
   "FeaturedProject": {
     "destacado": "Proyecto destacado",
+    "personal": "Proyecto propio",
+    "cliente": "Caso de estudio · cliente",
     "verMas": "Ver más",
     "sitio": "Sitio",
     "codigo": "Código"
@@ -45,6 +50,8 @@
   },
   "ProjectPage": {
     "volver": "Proyectos",
+    "personal": "Proyecto propio",
+    "cliente": "Caso de estudio · cliente",
     "verSitio": "Ver sitio",
     "codigo": "Código",
     "captura": "captura"

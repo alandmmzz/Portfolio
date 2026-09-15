@@ -14,6 +14,7 @@ export type Project = {
   cover?: string;
   images: string[];
   status: "live" | "en curso" | "archivado";
+  category: "personal" | "client";
   featured?: boolean;
 };
 
@@ -38,6 +39,7 @@ const es: Project[] = [
     stack: ["Next.js", "PostgreSQL", "NextAuth", "Web Push", "PWA"],
     link: "https://real-coffee-lovers.vercel.app/",
     repo: "https://github.com/alandmmzz/coffee-lovers",
+    category: "personal",
     cover: "/projects/coffee-lovers/1.png",
     images: [
       "/projects/coffee-lovers/1.png",
@@ -65,9 +67,73 @@ const es: Project[] = [
     stack: ["Next.js", "Supabase", "Tailwind CSS", "Claude API", "Steam API"],
     link: "https://gamecrm.vercel.app/",
     repo: "https://github.com/alandmmzz/gamecrm",
+    category: "personal",
     cover: "/projects/game-crm/1.png",
     images: ["/projects/game-crm/1.png", "/projects/game-crm/2.png"],
     status: "en curso",
+  },
+  {
+    slug: "luma-centro-estetico",
+    title: "LUMA Centro Estético",
+    year: "2026",
+    role: "Proyecto para cliente · full-stack",
+    summary:
+      "Presencia digital editorial para un centro estético, con servicios, reservas online y gestión de turnos.",
+    description:
+      "Landing responsive para LUMA Centro Estético, con una identidad visual cálida y editorial, catálogo administrable de tratamientos, reservas online con validación de disponibilidad, pagos opcionales y panel para gestionar turnos, horarios y equipo.",
+    highlights: [
+      "Landing editorial responsive con SEO técnico y datos estructurados",
+      "Catálogo de servicios y tratamientos administrable",
+      "Reserva online con control de disponibilidad y prevención de solapamientos",
+      "Panel administrativo, emails transaccionales y pagos opcionales",
+    ],
+    stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Better Auth", "Resend"],
+    link: "https://www.luma.com.uy/",
+    repo: "https://github.com/alandmmzz/LumaCentroEstetico",
+    category: "client",
+    cover: "/projects/luma/1.png",
+    images: ["/projects/luma/1.png"],
+    status: "live",
+  },
+  {
+    slug: "pequenido",
+    title: "Peque Nido",
+    year: "2026",
+    role: "Proyecto para cliente · ecommerce",
+    summary:
+      "Tienda online de juguetes y libros para bebés, con catálogo, carrito, checkout y panel de administración.",
+    description:
+      "Ecommerce para Peque Nido, con catálogo de juguetes y libros para primera infancia, fichas de producto con galería y video, carrito persistente, checkout con Mercado Pago o transferencia, zonas de envío configurables y gestión integral de productos y pedidos.",
+    highlights: [
+      "Catálogo filtrable por edad recomendada y categoría",
+      "Carrito persistente y checkout con dos métodos de pago",
+      "Precios promocionales y productos relacionados",
+      "Panel administrativo para productos, pedidos y envíos",
+    ],
+    stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Mercado Pago", "Vercel Blob"],
+    link: "https://www.pequenido.com.uy/",
+    repo: "https://github.com/alandmmzz/PequeNido",
+    category: "client",
+    cover: "/projects/pequenido/1.png",
+    images: ["/projects/pequenido/1.png"],
+    status: "live",
+  },
+  {
+    slug: "corte-fino",
+    title: "Corte Fino",
+    year: "2026",
+    role: "Proyecto para cliente · web app",
+    summary:
+      "Experiencia web para un estudio de barbería y cuidado masculino, con foco en marca y conversión.",
+    description:
+      "Sitio web para Corte Fino, pensado para presentar la marca, comunicar sus servicios y convertir visitas en reservas desde una experiencia clara y mobile-first.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    link: "https://corte-fino-barber.vercel.app/",
+    repo: "https://github.com/alandmmzz/CorteFino",
+    category: "client",
+    cover: "/projects/corte-fino/1.png",
+    images: ["/projects/corte-fino/1.png"],
+    status: "live",
   },
 ];
 
@@ -92,6 +158,7 @@ const en: Project[] = [
     stack: ["Next.js", "PostgreSQL", "NextAuth", "Web Push", "PWA"],
     link: "https://real-coffee-lovers.vercel.app/",
     repo: "https://github.com/alandmmzz/coffee-lovers",
+    category: "personal",
     cover: "/projects/coffee-lovers/1.png",
     images: [
       "/projects/coffee-lovers/1.png",
@@ -119,9 +186,73 @@ const en: Project[] = [
     stack: ["Next.js", "Supabase", "Tailwind CSS", "Claude API", "Steam API"],
     link: "https://gamecrm.vercel.app/",
     repo: "https://github.com/alandmmzz/gamecrm",
+    category: "personal",
     cover: "/projects/game-crm/1.png",
     images: ["/projects/game-crm/1.png", "/projects/game-crm/2.png"],
     status: "en curso",
+  },
+  {
+    slug: "luma-centro-estetico",
+    title: "LUMA Centro Estético",
+    year: "2026",
+    role: "Client project · full-stack",
+    summary:
+      "Editorial digital presence for a beauty center, with services, online booking, and appointment management.",
+    description:
+      "Responsive website for LUMA Centro Estético, with a warm editorial identity, an admin-managed treatment catalog, online booking with availability validation, optional payments, and a dashboard for appointments, schedules, and team members.",
+    highlights: [
+      "Responsive editorial landing page with technical SEO and structured data",
+      "Admin-managed services and treatments catalog",
+      "Online booking with availability control and overlap prevention",
+      "Admin dashboard, transactional emails, and optional payments",
+    ],
+    stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Better Auth", "Resend"],
+    link: "https://www.luma.com.uy/",
+    repo: "https://github.com/alandmmzz/LumaCentroEstetico",
+    category: "client",
+    cover: "/projects/luma/1.png",
+    images: ["/projects/luma/1.png"],
+    status: "live",
+  },
+  {
+    slug: "pequenido",
+    title: "Peque Nido",
+    year: "2026",
+    role: "Client project · ecommerce",
+    summary:
+      "Online store for baby toys and books, with catalog, cart, checkout, and an admin dashboard.",
+    description:
+      "Ecommerce platform for Peque Nido, with a catalog of toys and books for early childhood, product galleries and video, a persistent cart, checkout with Mercado Pago or bank transfer, configurable shipping zones, and full product and order management.",
+    highlights: [
+      "Catalog filterable by recommended age and category",
+      "Persistent cart and checkout with two payment methods",
+      "Promotional pricing and related products",
+      "Admin dashboard for products, orders, and shipping",
+    ],
+    stack: ["Next.js", "PostgreSQL", "Drizzle ORM", "Mercado Pago", "Vercel Blob"],
+    link: "https://www.pequenido.com.uy/",
+    repo: "https://github.com/alandmmzz/PequeNido",
+    category: "client",
+    cover: "/projects/pequenido/1.png",
+    images: ["/projects/pequenido/1.png"],
+    status: "live",
+  },
+  {
+    slug: "corte-fino",
+    title: "Corte Fino",
+    year: "2026",
+    role: "Personal project · web app",
+    summary:
+      "Web experience for a barbershop focused on brand presence, services, and conversion.",
+    description:
+      "Website for Corte Fino, designed to present the brand, communicate its services, and turn visits into bookings through a clear, mobile-first experience.",
+    stack: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    link: "https://corte-fino-barber.vercel.app/",
+    repo: "https://github.com/alandmmzz/CorteFino",
+    category: "client",
+    cover: "/projects/corte-fino/1.png",
+    images: ["/projects/corte-fino/1.png"],
+    status: "live",
   },
 ];
 

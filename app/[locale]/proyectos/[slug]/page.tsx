@@ -57,9 +57,12 @@ export default async function ProjectPage({
                 <h1 className="font-display text-3xl font-semibold text-fg sm:text-4xl">
                   {project.title}
                 </h1>
-                <p className="mt-2 font-mono text-sm text-muted">
-                  {project.role} · {project.year}
-                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-3 font-mono text-xs uppercase tracking-wider">
+                  <span className="text-accent">
+                    {project.category === "client" ? t("cliente") : t("personal")}
+                  </span>
+                  <span className="text-muted">{project.role} · {project.year}</span>
+                </div>
               </div>
               <div className="flex shrink-0 flex-wrap gap-3">
                 {project.link && (
