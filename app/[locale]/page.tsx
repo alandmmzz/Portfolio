@@ -3,6 +3,7 @@ import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Experience from "@/components/Experience";
 import ProjectsSection from "@/components/ProjectsSection";
+import ClientLogos from "@/components/ClientLogos";
 import Footer from "@/components/Footer";
 import { projects } from "@/content/projects";
 import { profile } from "@/content/profile";
@@ -19,6 +20,7 @@ export default async function Home() {
       <main>
         <Hero />
         <Experience />
+        <ClientLogos />
 
         <section id="proyectos" className="mx-auto max-w-5xl px-6 py-24">
           <div className="mb-10">

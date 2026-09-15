@@ -17,7 +17,9 @@
     "filtroTodos": "Todos",
     "filtroPersonal": "Proyectos propios",
     "filtroCliente": "Proyectos para clientes",
-    "stackTitulo": "Stack"
+    "stackTitulo": "Stack",
+    "clientesEyebrow": "Clientes",
+    "clientesTitulo": "Empresas con las que trabajé"
   },
   "Experience": {
     "titulo": "Experiencia",
